@@ -79,6 +79,7 @@ body {
   min-height: 100%;
   color: var(--paper);
   background: var(--ink);
+  overscroll-behavior-y: contain;
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

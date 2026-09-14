@@ -282,12 +282,7 @@ export default function HorizonMotion() {
         const rail = isMobileRail();
         drifting.forEach((el) => {
           if (el.dataset.settled !== "1") return;
-          if (rail && screenVariant.get(el) === "rail") {
-            const w0 = 6.283 / parseFloat(el.dataset.per || "13");
-            const ph0 = parseFloat(el.dataset.ph || "0");
-            el.style.transform = `translate3d(0,${(parseFloat(el.dataset.ampY || "2") * 0.9 * Math.sin(t * w0 + ph0)).toFixed(2)}px,0)`;
-            return;
-          }
+          if (rail && screenVariant.get(el) === "rail") return;
           const w = 6.283 / parseFloat(el.dataset.per || "13");
           const ph = parseFloat(el.dataset.ph || "0");
           const y = parseFloat(el.dataset.ampY || "2") * Math.sin(t * w + ph);
