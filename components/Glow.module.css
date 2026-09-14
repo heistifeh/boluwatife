@@ -1,0 +1,18 @@
+.glow {
+  position: absolute;
+  inset: -12% 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.layer {
+  position: absolute;
+  left: var(--left);
+  top: var(--top);
+  bottom: var(--bottom);
+  width: var(--width);
+  height: var(--height);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--bg);
+}

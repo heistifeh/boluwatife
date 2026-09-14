@@ -1,0 +1,39 @@
+.section {
+  position: relative;
+  padding: clamp(64px, 10vh, 124px) clamp(18px, 5vw, 72px);
+}
+
+@media (max-width: 699px) {
+  .section {
+    padding: 44px 20px;
+  }
+}
+
+.inner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 0 0 clamp(28px, 4vh, 48px);
+  font-weight: 800;
+  font-size: clamp(30px, 4.2vw, 60px);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  max-width: 24ch;
+}
+
+.body {
+  margin: 0;
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.6;
+  color: var(--body);
+  max-width: 62ch;
+}
+
+.highlight {
+  color: var(--gold-1);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}

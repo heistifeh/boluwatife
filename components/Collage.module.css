@@ -1,0 +1,98 @@
+.stage {
+  position: relative;
+  height: var(--stage-height);
+}
+
+@media (max-width: 699px) {
+  .stage[data-variant="rail"] {
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 2px 0 14px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .stage[data-variant="rail"]::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stage[data-variant="fan"] {
+    height: 310px;
+    margin-bottom: -8px;
+  }
+}
+
+.screen {
+  position: absolute;
+  left: var(--left);
+  bottom: var(--bottom);
+  width: var(--width);
+  transform: translateX(-50%) rotate(var(--rot));
+  z-index: var(--z);
+  padding: var(--padding);
+  border-radius: var(--radius);
+  background: var(--raised);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  filter: var(--filter, none);
+  display: var(--d-display, block);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 699px) {
+  .stage[data-variant="rail"] .screen {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: var(--m-width, var(--width));
+    flex: 0 0 auto;
+    order: var(--m-order, var(--order));
+    transform: none;
+    padding: var(--m-padding, var(--padding));
+    border-radius: var(--m-radius, var(--radius));
+    border: var(--m-border, var(--border));
+    box-shadow: var(--m-shadow, var(--shadow));
+    filter: var(--m-filter, none);
+    display: var(--m-display, block);
+    scroll-snap-align: center;
+    opacity: 1;
+  }
+
+  .stage[data-variant="rail"] .screen .img {
+    border-radius: var(--m-img-radius, var(--img-radius));
+  }
+
+  .stage[data-variant="fan"] .screen {
+    left: var(--m-left, var(--left));
+    bottom: var(--m-bottom, var(--bottom));
+    width: var(--m-width, var(--width));
+    transform: translateX(-50%) rotate(var(--m-rot, var(--rot)));
+    z-index: var(--m-z, var(--z));
+    padding: var(--m-padding, var(--padding));
+    border-radius: var(--m-radius, var(--radius));
+    border: var(--m-border, var(--border));
+    box-shadow: var(--m-shadow, var(--shadow));
+    filter: var(--m-filter, none);
+    display: var(--m-display, block);
+    opacity: 1;
+  }
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 19;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--img-radius);
+}
+
+@media (max-width: 699px) {
+  .stage[data-variant="fan"] .screen .img {
+    border-radius: var(--m-img-radius, var(--img-radius));
+  }
+}

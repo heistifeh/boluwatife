@@ -1,0 +1,40 @@
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  contain: strict;
+}
+
+.sheetA {
+  position: absolute;
+  inset: -22%;
+  background: linear-gradient(
+    116deg,
+    rgba(232, 210, 166, 0) 16%,
+    rgba(232, 210, 166, 0.2) 33%,
+    rgba(185, 143, 82, 0.12) 46%,
+    rgba(232, 210, 166, 0) 62%
+  );
+  filter: blur(44px);
+  animation: ambientA 42s ease-in-out infinite;
+  will-change: transform;
+  mix-blend-mode: screen;
+}
+
+.sheetB {
+  position: absolute;
+  inset: -28%;
+  background: linear-gradient(
+    94deg,
+    rgba(185, 143, 82, 0) 28%,
+    rgba(185, 143, 82, 0.15) 44%,
+    rgba(232, 210, 166, 0.1) 56%,
+    rgba(185, 143, 82, 0) 72%
+  );
+  filter: blur(64px);
+  animation: ambientB 61s ease-in-out infinite;
+  will-change: transform;
+  mix-blend-mode: screen;
+}

@@ -1,0 +1,148 @@
+.section {
+  position: relative;
+  padding: clamp(64px, 11vh, 150px) clamp(18px, 5vw, 72px) clamp(44px, 7vh, 88px);
+}
+
+.inner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tint-fitnex);
+}
+
+.name {
+  margin: 10px 0 0;
+  font-weight: 800;
+  font-size: clamp(46px, 8vw, 124px);
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+}
+
+.desc {
+  margin: 18px 0 0;
+  font-size: clamp(18px, 1.9vw, 23px);
+  line-height: 1.4;
+  max-width: 50ch;
+}
+
+.statRow {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: clamp(20px, 3vh, 32px);
+}
+
+.statNum {
+  font-weight: 800;
+  font-size: clamp(56px, 9vw, 140px);
+  letter-spacing: -0.05em;
+  line-height: 0.82;
+  font-variant-numeric: tabular-nums;
+  color: var(--tint-fitnex);
+}
+
+.statRest {
+  font-weight: 700;
+  font-size: clamp(18px, 1.9vw, 26px);
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+  line-height: 1.14;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 48px);
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: clamp(28px, 4vh, 48px);
+  padding-top: clamp(20px, 3vh, 30px);
+  border-top: 1px solid rgba(231, 177, 136, 0.26);
+}
+
+.claimBlock {
+  flex: 1 1 460px;
+  min-width: 0;
+}
+
+.claim {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 62ch;
+  color: var(--body);
+}
+
+.stack {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--dim-lit);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cta {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 999px;
+  color: var(--cta-ink);
+  text-decoration: none;
+}
+
+.secondary {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--edge-strong);
+  text-decoration: none;
+  background: var(--raised);
+}
+
+@media (max-width: 699px) {
+  .section {
+    padding: 44px 0 34px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 0;
+    padding-top: 18px;
+  }
+
+  .claimBlock {
+    flex: 1 1 auto;
+  }
+
+  .actions {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .cta,
+  .secondary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .secondary {
+    display: none;
+  }
+}

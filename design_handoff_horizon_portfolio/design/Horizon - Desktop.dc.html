@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Boluwatife Osineye — Mobile App Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@600;700;800;900&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; background: #0B0A09; }
+  body { margin: 0; background: #0B0A09; color: #ECE6DC; font-family: Archivo, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  * { box-sizing: border-box; }
+  p { text-wrap: pretty; }
+  img { display: block; }
+  a { color: #ECE6DC; text-decoration-color: rgba(236,230,220,0.4); text-underline-offset: 4px; }
+  a:hover { color: #FFFFFF; text-decoration-color: #E0C495; }
+  :focus-visible { outline: 2px solid #E8D2A6; outline-offset: 3px; box-shadow: 0 0 0 6px rgba(11,10,9,0.85); border-radius: 4px; }
+  @keyframes ambientA { 0% { transform: translate3d(-7%,-5%,0) scale(1.06); } 50% { transform: translate3d(7%,5%,0) scale(1.2); } 100% { transform: translate3d(-7%,-5%,0) scale(1.06); } }
+  @keyframes ambientB { 0% { transform: translate3d(6%,4%,0) scale(1.14); } 50% { transform: translate3d(-6%,-4%,0) scale(1.02); } 100% { transform: translate3d(6%,4%,0) scale(1.14); } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } [data-ambient] > * { animation: none !important; } }
+</style>
+</helmet>
+
+<nav style="position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,44px);background:rgba(11,10,9,0.72);backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,210,166,0.14)">
+  <a href="#top" style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:15px;letter-spacing:-0.02em;text-decoration:none">Boluwatife Osineye</a>
+  <div style="display:flex;align-items:center;gap:clamp(12px,2.4vw,30px);font-size:14px">
+    <a href="#work" style="text-decoration:none;color:#8A8177">Work</a>
+    <a href="#stack" style="text-decoration:none;color:#8A8177">How he builds</a>
+    <a href="#contact" style="text-decoration:none;color:#8A8177">Contact</a>
+    <span style="display:flex;align-items:center;gap:7px;font-weight:600"><span style="width:7px;height:7px;border-radius:50%;background:#E0C495;box-shadow:0 0 12px rgba(226,200,156,0.8);display:inline-block"></span>Available</span>
+  </div>
+</nav>
+
+<div data-ambient="" aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:strict">
+  <div style="position:absolute;inset:-22%;background:linear-gradient(116deg, rgba(232,210,166,0) 16%, rgba(232,210,166,0.2) 33%, rgba(185,143,82,0.12) 46%, rgba(232,210,166,0) 62%);filter:blur(44px);animation:ambientA 42s ease-in-out infinite;will-change:transform;mix-blend-mode:screen"></div>
+  <div style="position:absolute;inset:-28%;background:linear-gradient(94deg, rgba(185,143,82,0) 28%, rgba(185,143,82,0.15) 44%, rgba(232,210,166,0.1) 56%, rgba(185,143,82,0) 72%);filter:blur(64px);animation:ambientB 61s ease-in-out infinite;will-change:transform;mix-blend-mode:screen"></div>
+</div>
+
+<main id="top" style="position:relative;z-index:1">
+
+  <section data-screen-label="Hero" style="position:relative;padding:clamp(86px,12vh,132px) clamp(18px,5vw,72px) clamp(52px,8vh,104px)">
+    <div data-glow="1.15" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;top:-10%;width:150%;height:74%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(185,143,82,0.741), rgba(185,143,82,0.271) 54%, rgba(11,10,9,0) 78%)"></div>
+      <div style="position:absolute;left:50%;top:-8%;width:104%;height:54%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(226,200,156,0.741), rgba(226,200,156,0.508) 44%, rgba(185,143,82,0.128) 70%, rgba(11,10,9,0) 85%)"></div>
+      <div style="position:absolute;left:50%;top:6%;width:62%;height:30%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(244,233,208,0.741), rgba(226,200,156,0.271) 52%, rgba(11,10,9,0) 78%)"></div>
+    </div>
+
+    <div style="position:relative;max-width:1440px;margin:0 auto">
+      <div data-stage="" style="position:relative;height:clamp(280px,41vw,580px);margin:0 0 clamp(-12px,-1vh,-6px)">
+        <div aria-hidden="true" style="position:absolute;left:-8%;right:-8%;bottom:-14%;height:34%;z-index:7;pointer-events:none;background:linear-gradient(to top, #0B0A09 0%, rgba(11,10,9,0.92) 34%, rgba(11,10,9,0.45) 66%, rgba(11,10,9,0) 100%)"></div>
+        <div data-screen="" data-rot="-8" data-order="4" style="position:absolute;left:17%;bottom:19%;width:12%;transform:translateX(-50%) rotate(-8deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 26px 50px rgba(0,0,0,0.6);filter:brightness(0.66) saturate(0.88)">
+          <img src="img/bulk-shipment-1.jpg" alt="ISDS bulk shipment package details" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+        <div data-screen="" data-rot="-4" data-order="2" style="position:absolute;left:30%;bottom:8%;width:15%;transform:translateX(-50%) rotate(-4deg);z-index:3;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #332C24;box-shadow:0 34px 64px rgba(0,0,0,0.6), inset 0 1px 0 rgba(226,200,156,0.16);filter:brightness(0.84)">
+          <img src="img/dashboard-24e93d62.jpg" alt="ISDS Vendors dashboard with incoming orders and balance" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+        <div data-screen="" data-rot="-1" data-order="0" style="position:absolute;left:43.5%;bottom:0;width:18.5%;transform:translateX(-50%) rotate(-1deg);z-index:6;padding:6px;border-radius:28px;background:#1C1815;border:1px solid #463C30;box-shadow:0 48px 90px rgba(0,0,0,0.66), inset 0 1px 0 rgba(235,215,175,0.3)">
+          <img src="img/dashboard-c92695ae.jpg" alt="Insta-Delivery customer home with nearby vendors and wallet balance" loading="eager" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:23px" />
+        </div>
+        <div data-screen="" data-rot="3" data-order="1" style="position:absolute;left:60%;bottom:5%;width:17%;transform:translateX(-50%) rotate(3deg);z-index:5;padding:6px;border-radius:26px;background:#1C1815;border:1px solid #463C30;box-shadow:0 42px 80px rgba(0,0,0,0.64), inset 0 1px 0 rgba(235,215,175,0.24)">
+          <img src="img/img-7788-2.jpg" alt="Fitnex home with sessions, volume and streak" loading="eager" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:21px" />
+        </div>
+        <div data-screen="" data-rot="6" data-order="3" style="position:absolute;left:74%;bottom:12%;width:14%;transform:translateX(-50%) rotate(6deg);z-index:3;padding:5px;border-radius:20px;background:#1C1815;border:1px solid #332C24;box-shadow:0 32px 60px rgba(0,0,0,0.6);filter:brightness(0.82)">
+          <img src="img/img-7775.jpg" alt="ISDS Driver online on the map waiting for orders" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:16px" />
+        </div>
+        <div data-screen="" data-rot="9" data-order="5" style="position:absolute;left:85.5%;bottom:21%;width:11.5%;transform:translateX(-50%) rotate(9deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 48px rgba(0,0,0,0.6);filter:brightness(0.62) saturate(0.85)">
+          <img src="img/img-7848.jpg" alt="Cartify product listing" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+      </div>
+      <h1 style="position:relative;z-index:8;margin:0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(42px,7.4vw,112px);line-height:0.92;letter-spacing:-0.04em;max-width:15ch;text-wrap:balance">Boluwatife Osineye<span style="display:block;font-weight:600;font-size:clamp(20px,2.7vw,40px);line-height:1.1;letter-spacing:-0.025em;color:#C7BDAF;margin-top:clamp(10px,1.6vh,20px)">Mobile App Developer</span></h1>
+      <p style="margin:clamp(18px,2.6vh,30px) 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(22px,3vw,44px);line-height:1.08;letter-spacing:-0.03em;max-width:22ch">I turn business problems into products that ship.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(12px,2vw,26px);margin-top:clamp(22px,3.4vh,40px);font-variant-numeric:tabular-nums;font-size:clamp(15px,1.5vw,19px);font-weight:600">
+        <span>4 systems live</span>
+        <span aria-hidden="true" style="width:1px;height:16px;background:rgba(236,230,220,0.24)"></span>
+        <span><span style="color:#E8D2A6">200+</span> users on a solo build</span>
+        <span aria-hidden="true" style="width:1px;height:16px;background:rgba(236,230,220,0.24)"></span>
+        <span><span style="color:#E8D2A6">20%+</span> overhead reduction measured</span>
+        <span aria-hidden="true" style="width:1px;height:16px;background:rgba(236,230,220,0.24)"></span>
+        <span><span style="color:#E8D2A6">50+</span> developers mentored</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section data-screen-label="Proof bar" style="position:relative;z-index:2;background:linear-gradient(180deg, rgba(16,14,12,0) 0%, rgba(16,14,12,0.92) 22%, rgba(16,14,12,0.92) 78%, rgba(16,14,12,0) 100%);border-top:1px solid rgba(232,210,166,0.12);border-bottom:1px solid rgba(232,210,166,0.12);padding:clamp(26px,4vh,40px) clamp(18px,5vw,72px)">
+    <div style="max-width:1440px;margin:0 auto;display:grid;gap:clamp(20px,2.6vw,38px);grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:15px;font-weight:700">ISDS — three apps live, one in development</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <a href="#" style="font-size:13px;font-weight:500;padding:7px 12px;border:1px solid rgba(232,210,166,0.2);border-radius:8px;text-decoration:none;background:#1C1815">Insta-Delivery Customer — App Store</a>
+          <a href="#" style="font-size:13px;font-weight:500;padding:7px 12px;border:1px solid rgba(232,210,166,0.2);border-radius:8px;text-decoration:none;background:#1C1815">Vendors — App Store</a>
+          <a href="#" style="font-size:13px;font-weight:500;padding:7px 12px;border:1px solid rgba(232,210,166,0.2);border-radius:8px;text-decoration:none;background:#1C1815">Driver — App Store</a>
+          <span style="font-size:13px;font-weight:500;padding:7px 12px;border:1px dashed #564A3A;border-radius:8px;color:#8A8177">Customer B2B — coming soon</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:15px;font-weight:700;font-variant-numeric:tabular-nums">Fitnex — live PWA, 200+ active users</div>
+        <a href="https://fitnexonline.com" style="font-size:14px;width:fit-content">fitnexonline.com</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:15px;font-weight:700">Cartify — working demo</div>
+        <a href="https://next-ecommerce-eta-nine.vercel.app" style="font-size:14px;width:fit-content">next-ecommerce-eta-nine.vercel.app</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Track record" style="position:relative;padding:clamp(64px,10vh,124px) clamp(18px,5vw,72px)">
+    <div data-glow="0.42" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;bottom:-40%;width:150%;height:86%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(185,143,82,0.725), rgba(185,143,82,0.218) 56%, rgba(11,10,9,0) 80%)"></div>
+    </div>
+    <div style="position:relative;max-width:1280px;margin:0 auto">
+      <h2 style="margin:0 0 clamp(28px,4vh,48px);font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,60px);line-height:1;letter-spacing:-0.035em;max-width:24ch">Four reasons this is a safe hire</h2>
+      <div style="display:grid;gap:clamp(14px,1.6vw,20px);grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))">
+        <div style="background:linear-gradient(180deg,#201B15 0%,#120F0C 100%);border:1px solid #332C24;border-radius:16px;padding:clamp(20px,2.2vw,28px);box-shadow:inset 0 1px 0 rgba(232,210,166,0.45), 0 30px 60px rgba(0,0,0,0.45)">
+          <h3 style="margin:0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(19px,1.8vw,23px);letter-spacing:-0.02em;line-height:1.15">He ships end to end</h3>
+          <p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:#C7BDAF;max-width:40ch">On ISDS he owns the wallet — funding, peer-to-peer transfers, wallet checkout, vendor earnings — plus the API behind it and the performance work in front of it.</p>
+        </div>
+        <div style="background:linear-gradient(180deg,#201B15 0%,#120F0C 100%);border:1px solid #332C24;border-radius:16px;padding:clamp(20px,2.2vw,28px);box-shadow:inset 0 1px 0 rgba(232,210,166,0.45), 0 30px 60px rgba(0,0,0,0.45)">
+          <h3 style="margin:0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(19px,1.8vw,23px);letter-spacing:-0.02em;line-height:1.15">His work moved a real business number</h3>
+          <p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:#C7BDAF;max-width:40ch">Delivery overhead cut by <span style="color:#E8D2A6;font-weight:700;font-variant-numeric:tabular-nums">20%+</span> at ISDS while the platform scaled across four apps. Hiring him affects operating cost, not just the roadmap.</p>
+        </div>
+        <div style="background:linear-gradient(180deg,#201B15 0%,#120F0C 100%);border:1px solid #332C24;border-radius:16px;padding:clamp(20px,2.2vw,28px);box-shadow:inset 0 1px 0 rgba(232,210,166,0.45), 0 30px 60px rgba(0,0,0,0.45)">
+          <h3 style="margin:0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(19px,1.8vw,23px);letter-spacing:-0.02em;line-height:1.15">He can run things, not just execute them</h3>
+          <p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:#C7BDAF;max-width:40ch">Mentored <span style="color:#E8D2A6;font-weight:700;font-variant-numeric:tabular-nums">50+</span> developers. He can be handed a problem and an outcome rather than a ticket queue.</p>
+        </div>
+        <div style="background:linear-gradient(180deg,#201B15 0%,#120F0C 100%);border:1px solid #332C24;border-radius:16px;padding:clamp(20px,2.2vw,28px);box-shadow:inset 0 1px 0 rgba(232,210,166,0.45), 0 30px 60px rgba(0,0,0,0.45)">
+          <h3 style="margin:0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(19px,1.8vw,23px);letter-spacing:-0.02em;line-height:1.15">He finishes what he starts, alone</h3>
+          <p style="margin:12px 0 0;font-size:16px;line-height:1.55;color:#C7BDAF;max-width:40ch">Fitnex went from an idea to launch to <span style="color:#E8D2A6;font-weight:700;font-variant-numeric:tabular-nums">200+</span> real users solo, and he still maintains it. Nothing was handed off half-finished.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" data-screen-label="ISDS connective moment" style="position:relative;padding:clamp(48px,7vh,88px) clamp(18px,5vw,72px)">
+    <div data-glow="0.5" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;bottom:-50%;width:120%;height:96%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(234,208,138,0.616), rgba(185,143,82,0.218) 52%, rgba(11,10,9,0) 78%)"></div>
+    </div>
+    <div style="position:relative;max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,64px);align-items:flex-end;justify-content:space-between">
+      <div style="flex:1 1 360px;min-width:0">
+        <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4vw,52px);letter-spacing:-0.035em;line-height:1">ISDS</div>
+        <p style="margin:12px 0 0;font-size:17px;line-height:1.55;color:#C7BDAF;max-width:56ch">Mobile logistics and commerce for businesses across Nigeria and Africa. Four apps, four different users, one platform — customer, vendor, driver, and a business-facing client.</p>
+      </div>
+      <div style="flex:0 1 300px">
+        <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(44px,5.6vw,78px);letter-spacing:-0.04em;line-height:0.9;font-variant-numeric:tabular-nums;color:#EAD08A">20%+</div>
+        <div style="font-size:15px;color:#C7BDAF;margin-top:8px">delivery overhead cut platform-wide</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="ISDS Customer" style="position:relative;padding:clamp(56px,9vh,120px) clamp(18px,5vw,72px) clamp(40px,6vh,76px)">
+    <div data-glow="0.85" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;bottom:-28%;width:150%;height:84%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(185,143,82,0.741), rgba(185,143,82,0.236) 54%, rgba(11,10,9,0) 78%)"></div>
+      <div style="position:absolute;left:50%;bottom:-12%;width:64%;height:50%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(234,208,138,0.741), rgba(234,208,138,0.435) 44%, rgba(185,143,82,0.109) 70%, rgba(11,10,9,0) 85%)"></div>
+      <div style="position:absolute;left:50%;bottom:-5%;width:32%;height:22%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(244,233,208,0.725), rgba(234,208,138,0.218) 52%, rgba(11,10,9,0) 78%)"></div>
+    </div>
+    <div style="position:relative;max-width:1180px;margin:0 auto">
+      <div style="font-size:14px;font-weight:600;color:#EAD08A;letter-spacing:0.01em">Insta-Delivery Customer</div>
+      <h2 style="margin:10px 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(38px,6vw,92px);line-height:0.92;letter-spacing:-0.04em">ISDS Customer</h2>
+      <p style="margin:16px 0 0;font-size:clamp(17px,1.7vw,20px);line-height:1.45;max-width:52ch;color:#C7BDAF">Ordering from a nearby vendor used to mean phone calls and cash. This app carries the whole thing — pay from an in-app wallet, watch the delivery move, talk to nobody.</p>
+      <div data-stage="" style="position:relative;height:clamp(280px,38vw,520px);margin-top:clamp(24px,4vh,48px)">
+        <div data-screen="" data-rot="-7" data-order="3" style="position:absolute;left:24%;bottom:16%;width:12.5%;transform:translateX(-50%) rotate(-7deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 48px rgba(0,0,0,0.6);filter:brightness(0.68) saturate(0.88)">
+          <img src="img/splash-screen.jpg" alt="Insta-Delivery splash screen" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+        <div data-screen="" data-rot="-3.5" data-order="1" style="position:absolute;left:36%;bottom:6%;width:15.5%;transform:translateX(-50%) rotate(-3.5deg);z-index:3;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #332C24;box-shadow:0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.16);filter:brightness(0.86)">
+          <img src="img/categories.jpg" alt="Customer category browser" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+        <div data-screen="" data-rot="0" data-order="0" style="position:absolute;left:50%;bottom:0;width:19%;transform:translateX(-50%) rotate(0deg);z-index:6;padding:6px;border-radius:28px;background:#1C1815;border:1px solid #463C30;box-shadow:0 48px 90px rgba(0,0,0,0.66), inset 0 1px 0 rgba(234,208,138,0.3)">
+          <img src="img/dashboard-c92695ae.jpg" alt="Customer home with location, categories and nearby food" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:23px" />
+        </div>
+        <div data-screen="" data-rot="3.5" data-order="2" style="position:absolute;left:64%;bottom:6%;width:15.5%;transform:translateX(-50%) rotate(3.5deg);z-index:3;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #332C24;box-shadow:0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.16);filter:brightness(0.86)">
+          <img src="img/search-result-all.jpg" alt="Search results across stores and items" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+        <div data-screen="" data-rot="7" data-order="4" style="position:absolute;left:76%;bottom:16%;width:12.5%;transform:translateX(-50%) rotate(7deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 48px rgba(0,0,0,0.6);filter:brightness(0.68) saturate(0.88)">
+          <img src="img/dashboard-no-location.jpg" alt="Customer home with location not yet set" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,48px);align-items:flex-end;justify-content:space-between;margin-top:clamp(26px,4vh,44px);padding-top:clamp(20px,3vh,30px);border-top:1px solid rgba(234,208,138,0.26)">
+        <div style="flex:1 1 420px;min-width:0">
+          <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,34px);line-height:1.1;letter-spacing:-0.03em;max-width:30ch">Live on the App Store, with wallet funding and P2P transfers shipped end to end.</div>
+          <div style="margin-top:14px;font-size:14px;color:#B3A99C">React Native · Expo · TypeScript · Node.js · Supabase</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="#" style="font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;background:linear-gradient(180deg,#F0E2B0,#B98F52);color:#241B0E;text-decoration:none;box-shadow:0 10px 30px rgba(234,208,138,0.32)">Get it on the App Store</a>
+          <a href="#" style="font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;border:1px solid #564A3A;text-decoration:none;background:#1C1815">Case study</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="ISDS Vendors" style="position:relative;padding:clamp(56px,9vh,120px) clamp(18px,5vw,72px) clamp(40px,6vh,76px)">
+    <div data-glow="0.8" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;bottom:-28%;width:146%;height:82%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(185,143,82,0.725), rgba(185,143,82,0.218) 54%, rgba(11,10,9,0) 78%)"></div>
+      <div style="position:absolute;left:50%;bottom:-12%;width:60%;height:48%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(234,208,138,0.741), rgba(234,208,138,0.399) 44%, rgba(185,143,82,0.109) 70%, rgba(11,10,9,0) 85%)"></div>
+    </div>
+    <div style="position:relative;max-width:1180px;margin:0 auto">
+      <div style="font-size:14px;font-weight:600;color:#EAD08A">Insta-Delivery Vendors</div>
+      <h2 style="margin:10px 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(38px,6vw,92px);line-height:0.92;letter-spacing:-0.04em">ISDS Vendors</h2>
+      <p style="margin:16px 0 0;font-size:clamp(17px,1.7vw,20px);line-height:1.45;max-width:52ch;color:#C7BDAF">A shop needs to accept an order, prepare it against a timer, dispatch it, and get its money the same day. That is the whole app.</p>
+      <div data-stage="" style="position:relative;height:clamp(260px,34vw,470px);margin-top:clamp(24px,4vh,48px)">
+        <div data-screen="" data-rot="-6" data-order="3" style="position:absolute;left:27%;bottom:15%;width:12.5%;transform:translateX(-50%) rotate(-6deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 48px rgba(0,0,0,0.6);filter:brightness(0.68) saturate(0.88)">
+          <img src="img/notifications.jpg" alt="Vendor notifications" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+        <div data-screen="" data-rot="-3" data-order="1" style="position:absolute;left:38%;bottom:6%;width:15%;transform:translateX(-50%) rotate(-3deg);z-index:3;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #332C24;box-shadow:0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.16);filter:brightness(0.86)">
+          <img src="img/transfer-funds.jpg" alt="Transfer funds to another wallet" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+        <div data-screen="" data-rot="0" data-order="0" style="position:absolute;left:51%;bottom:0;width:18.5%;transform:translateX(-50%) rotate(0deg);z-index:6;padding:6px;border-radius:28px;background:#1C1815;border:1px solid #463C30;box-shadow:0 48px 90px rgba(0,0,0,0.66), inset 0 1px 0 rgba(234,208,138,0.3)">
+          <img src="img/dashboard-24e93d62.jpg" alt="Vendor dashboard with incoming orders and balance" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:23px" />
+        </div>
+        <div data-screen="" data-rot="4" data-order="2" style="position:absolute;left:65%;bottom:7%;width:15%;transform:translateX(-50%) rotate(4deg);z-index:3;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #332C24;box-shadow:0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.16);filter:brightness(0.86)">
+          <img src="img/withdraw-funds.jpg" alt="Withdraw earnings to a bank account" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,48px);align-items:flex-end;justify-content:space-between;margin-top:clamp(26px,4vh,44px);padding-top:clamp(20px,3vh,30px);border-top:1px solid rgba(234,208,138,0.26)">
+        <div style="flex:1 1 420px;min-width:0">
+          <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,34px);line-height:1.1;letter-spacing:-0.03em;max-width:30ch">Earnings, withdrawals and payouts all run through the wallet layer he built.</div>
+          <div style="margin-top:14px;font-size:14px;color:#B3A99C">React Native · Expo · TypeScript · Node.js · Supabase</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="#" style="font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;background:linear-gradient(180deg,#F0E2B0,#B98F52);color:#241B0E;text-decoration:none;box-shadow:0 10px 30px rgba(234,208,138,0.32)">Get it on the App Store</a>
+          <a href="#" style="font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;border:1px solid #564A3A;text-decoration:none;background:#1C1815">Case study</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="ISDS Driver" style="position:relative;padding:clamp(56px,9vh,120px) clamp(18px,5vw,72px) clamp(40px,6vh,76px)">
+    <div data-glow="0.8" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;bottom:-28%;width:146%;height:82%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(185,143,82,0.725), rgba(185,143,82,0.218) 54%, rgba(11,10,9,0) 78%)"></div>
+      <div style="position:absolute;left:50%;bottom:-12%;width:60%;height:48%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(234,208,138,0.741), rgba(234,208,138,0.399) 44%, rgba(185,143,82,0.109) 70%, rgba(11,10,9,0) 85%)"></div>
+    </div>
+    <div style="position:relative;max-width:1180px;margin:0 auto">
+      <div style="font-size:14px;font-weight:600;color:#EAD08A">Insta-Delivery Driver</div>
+      <h2 style="margin:10px 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(38px,6vw,92px);line-height:0.92;letter-spacing:-0.04em">ISDS Driver</h2>
+      <p style="margin:16px 0 0;font-size:clamp(17px,1.7vw,20px);line-height:1.45;max-width:52ch;color:#C7BDAF">A rider goes online, takes the next job, and proves the drop-off — on a cheap phone and a patchy connection. Everything here had to survive that.</p>
+      <div data-stage="" style="position:relative;height:clamp(260px,34vw,470px);margin-top:clamp(24px,4vh,48px)">
+        <div data-screen="" data-rot="-7" data-order="4" style="position:absolute;left:24%;bottom:16%;width:12%;transform:translateX(-50%) rotate(-7deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 48px rgba(0,0,0,0.6);filter:brightness(0.66) saturate(0.88)">
+          <img src="img/img-7778.jpg" alt="Driver message centre" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+        <div data-screen="" data-rot="-3.5" data-order="2" style="position:absolute;left:36%;bottom:6%;width:15%;transform:translateX(-50%) rotate(-3.5deg);z-index:3;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #332C24;box-shadow:0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.16);filter:brightness(0.86)">
+          <img src="img/img-7776.jpg" alt="Order ready for pickup" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+        <div data-screen="" data-rot="0" data-order="0" style="position:absolute;left:50%;bottom:0;width:18.5%;transform:translateX(-50%) rotate(0deg);z-index:6;padding:6px;border-radius:28px;background:#1C1815;border:1px solid #463C30;box-shadow:0 48px 90px rgba(0,0,0,0.66), inset 0 1px 0 rgba(234,208,138,0.3)">
+          <img src="img/img-7775.jpg" alt="Driver online on the map, waiting for orders" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:23px" />
+        </div>
+        <div data-screen="" data-rot="3.5" data-order="1" style="position:absolute;left:64%;bottom:6%;width:15%;transform:translateX(-50%) rotate(3.5deg);z-index:3;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #332C24;box-shadow:0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.16);filter:brightness(0.86)">
+          <img src="img/img-7777.jpg" alt="Order delivered confirmation" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+        <div data-screen="" data-rot="7" data-order="3" style="position:absolute;left:76%;bottom:16%;width:12%;transform:translateX(-50%) rotate(7deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 48px rgba(0,0,0,0.6);filter:brightness(0.66) saturate(0.88)">
+          <img src="img/img-7779.jpg" alt="Driver performance review" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,48px);align-items:flex-end;justify-content:space-between;margin-top:clamp(26px,4vh,44px);padding-top:clamp(20px,3vh,30px);border-top:1px solid rgba(234,208,138,0.26)">
+        <div style="flex:1 1 420px;min-width:0">
+          <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,34px);line-height:1.1;letter-spacing:-0.03em;max-width:30ch">The search and list performance work here is what took minutes out of every run.</div>
+          <div style="margin-top:14px;font-size:14px;color:#B3A99C">React Native · Expo · TypeScript · Node.js · Supabase</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="#" style="font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;background:linear-gradient(180deg,#F0E2B0,#B98F52);color:#241B0E;text-decoration:none;box-shadow:0 10px 30px rgba(234,208,138,0.32)">Get the driver app</a>
+          <a href="#" style="font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;border:1px solid #564A3A;text-decoration:none;background:#1C1815">Case study</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="ISDS Customer B2B" style="position:relative;padding:clamp(56px,9vh,120px) clamp(18px,5vw,72px) clamp(40px,6vh,76px)">
+    <div data-glow="0.62" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;bottom:-30%;width:140%;height:80%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(185,143,82,0.653), rgba(185,143,82,0.2) 54%, rgba(11,10,9,0) 78%)"></div>
+      <div style="position:absolute;left:50%;bottom:-14%;width:54%;height:44%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(234,208,138,0.741), rgba(234,208,138,0.327) 44%, rgba(11,10,9,0) 82%)"></div>
+    </div>
+    <div style="position:relative;max-width:1180px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px">
+        <span style="font-size:14px;font-weight:600;color:#EAD08A">Insta-Delivery Customer B2B</span>
+        <span style="font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;border:1px dashed #564A3A;color:#C7BDAF">In development</span>
+      </div>
+      <h2 style="margin:10px 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(34px,5.2vw,78px);line-height:0.94;letter-spacing:-0.04em">ISDS Customer B2B</h2>
+      <p style="margin:16px 0 0;font-size:clamp(17px,1.7vw,20px);line-height:1.45;max-width:52ch;color:#C7BDAF">Businesses booking local, international and multi-drop bulk shipments — with insurance and compliance handled in the same flow.</p>
+      <div data-stage="" style="position:relative;height:clamp(240px,30vw,420px);margin-top:clamp(24px,4vh,44px)">
+        <div data-screen="" data-rot="-6" data-order="3" style="position:absolute;left:29%;bottom:14%;width:11.5%;transform:translateX(-50%) rotate(-6deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 48px rgba(0,0,0,0.6);filter:brightness(0.66) saturate(0.88)">
+          <img src="img/onboarding-3.jpg" alt="B2B onboarding: insurance and protection" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+        <div data-screen="" data-rot="-3" data-order="1" style="position:absolute;left:39.5%;bottom:6%;width:14%;transform:translateX(-50%) rotate(-3deg);z-index:3;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #332C24;box-shadow:0 32px 60px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.14);filter:brightness(0.86)">
+          <img src="img/bulk-shipment-1.jpg" alt="Bulk shipment package details" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+        <div data-screen="" data-rot="0" data-order="0" style="position:absolute;left:51%;bottom:0;width:17%;transform:translateX(-50%) rotate(0deg);z-index:6;padding:6px;border-radius:26px;background:#1C1815;border:1px solid #463C30;box-shadow:0 44px 84px rgba(0,0,0,0.66), inset 0 1px 0 rgba(234,208,138,0.26)">
+          <img src="img/dashboard.jpg" alt="B2B dashboard: international, local and bulk shipping" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:21px" />
+        </div>
+        <div data-screen="" data-rot="3" data-order="2" style="position:absolute;left:63%;bottom:6%;width:14%;transform:translateX(-50%) rotate(3deg);z-index:3;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #332C24;box-shadow:0 32px 60px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.14);filter:brightness(0.86)">
+          <img src="img/bulk-shipment-2.jpg" alt="Bulk shipment delivery method" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+        <div data-screen="" data-rot="6" data-order="4" style="position:absolute;left:73.5%;bottom:14%;width:11.5%;transform:translateX(-50%) rotate(6deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 48px rgba(0,0,0,0.6);filter:brightness(0.66) saturate(0.88)">
+          <img src="img/bulk-shipment.jpg" alt="Bulk shipment pickup step" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,48px);align-items:flex-end;justify-content:space-between;margin-top:clamp(24px,3.6vh,40px);padding-top:clamp(20px,3vh,30px);border-top:1px solid rgba(234,208,138,0.26)">
+        <div style="flex:1 1 420px;min-width:0">
+          <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(20px,2.1vw,29px);line-height:1.14;letter-spacing:-0.025em;max-width:34ch">Not launched yet. These are the flows in build, audited on TestFlight before release.</div>
+          <div style="margin-top:14px;font-size:14px;color:#B3A99C">React Native · Expo · TypeScript · Node.js · Supabase</div>
+        </div>
+        <a href="#" style="font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;border:1px solid #564A3A;text-decoration:none;background:#1C1815">Case study</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Fitnex" style="position:relative;padding:clamp(64px,11vh,150px) clamp(18px,5vw,72px) clamp(44px,7vh,88px)">
+    <div data-glow="1.3" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;bottom:-32%;width:166%;height:94%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(185,143,82,0.741), rgba(185,143,82,0.29) 54%, rgba(11,10,9,0) 80%)"></div>
+      <div style="position:absolute;left:50%;bottom:-14%;width:78%;height:58%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(231,177,136,0.741), rgba(231,177,136,0.544) 44%, rgba(185,143,82,0.145) 70%, rgba(11,10,9,0) 86%)"></div>
+      <div style="position:absolute;left:50%;bottom:-6%;width:40%;height:26%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(244,233,208,0.741), rgba(231,177,136,0.29) 52%, rgba(11,10,9,0) 78%)"></div>
+    </div>
+    <div style="position:relative;max-width:1280px;margin:0 auto">
+      <div style="font-size:14px;font-weight:600;color:#E7B188">Fitnex — conceived, built and launched solo</div>
+      <h2 style="margin:10px 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(46px,8vw,124px);line-height:0.88;letter-spacing:-0.045em">Fitnex</h2>
+      <p style="margin:18px 0 0;font-size:clamp(18px,1.9vw,23px);line-height:1.4;max-width:50ch">Log a workout in seconds and see whether you are actually getting stronger. Installable, and working with no signal in the gym.</p>
+      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:clamp(20px,3vh,32px)">
+        <span style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(56px,9vw,140px);letter-spacing:-0.05em;line-height:0.82;font-variant-numeric:tabular-nums;color:#E7B188">200+</span>
+        <span style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(18px,1.9vw,26px);letter-spacing:-0.02em;max-width:20ch;line-height:1.14">active users, from an idea he shipped alone</span>
+      </div>
+      <div data-stage="" style="position:relative;height:clamp(300px,42vw,580px);margin-top:clamp(26px,4vh,52px)">
+        <div data-screen="" data-rot="-9" data-order="5" style="position:absolute;left:16%;bottom:20%;width:11.5%;transform:translateX(-50%) rotate(-9deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 48px rgba(0,0,0,0.6);filter:brightness(0.64) saturate(0.86)">
+          <img src="img/img-7782.jpg" alt="Fitnex landing screen" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+        <div data-screen="" data-rot="-5" data-order="3" style="position:absolute;left:28%;bottom:10%;width:14%;transform:translateX(-50%) rotate(-5deg);z-index:2;padding:5px;border-radius:20px;background:#1C1815;border:1px solid #332C24;box-shadow:0 30px 58px rgba(0,0,0,0.62);filter:brightness(0.8)">
+          <img src="img/img-7785.jpg" alt="Personalised setup from the Fitnex onboarding quiz" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:16px" />
+        </div>
+        <div data-screen="" data-rot="-2" data-order="1" style="position:absolute;left:40%;bottom:3%;width:17%;transform:translateX(-50%) rotate(-2deg);z-index:4;padding:5px;border-radius:24px;background:#1C1815;border:1px solid #332C24;box-shadow:0 38px 72px rgba(0,0,0,0.64), inset 0 1px 0 rgba(231,177,136,0.2);filter:brightness(0.93)">
+          <img src="img/img-7789-2.jpg" alt="Fitnex stats, volume comparison and personal records" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:20px" />
+        </div>
+        <div data-screen="" data-rot="2" data-order="0" style="position:absolute;left:56%;bottom:0;width:19.5%;transform:translateX(-50%) rotate(2deg);z-index:6;padding:6px;border-radius:30px;background:#1C1815;border:1px solid #463C30;box-shadow:0 52px 96px rgba(0,0,0,0.68), inset 0 1px 0 rgba(231,177,136,0.34)">
+          <img src="img/img-7788-2.jpg" alt="Fitnex home with sessions, volume and streak" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:25px" />
+        </div>
+        <div data-screen="" data-rot="6" data-order="2" style="position:absolute;left:72%;bottom:8%;width:14.5%;transform:translateX(-50%) rotate(6deg);z-index:3;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #332C24;box-shadow:0 32px 62px rgba(0,0,0,0.62);filter:brightness(0.84)">
+          <img src="img/img-7787-2.jpg" alt="Fitnex workout history by week" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+        <div data-screen="" data-rot="10" data-order="4" style="position:absolute;left:85%;bottom:19%;width:11.5%;transform:translateX(-50%) rotate(10deg);z-index:1;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 48px rgba(0,0,0,0.6);filter:brightness(0.64) saturate(0.86)">
+          <img src="img/img-7790-2.jpg" alt="Fitnex profile with badges and goals" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,48px);align-items:flex-end;justify-content:space-between;margin-top:clamp(28px,4vh,48px);padding-top:clamp(20px,3vh,30px);border-top:1px solid rgba(231,177,136,0.26)">
+        <div style="flex:1 1 460px;min-width:0">
+          <p style="margin:0;font-size:16px;line-height:1.55;max-width:62ch;color:#C7BDAF">Onboarding quiz, calendar share cards, offline-first service workers, a full Supabase schema migration, and the performance pass — WebP compression, chunk splitting, preloading — through to public launch.</p>
+          <div style="margin-top:14px;font-size:14px;color:#B3A99C">React · Vite · TypeScript · Tailwind · Supabase · Resend</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="https://fitnexonline.com" style="font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;background:linear-gradient(180deg,#F0C6A6,#B98F52);color:#241B0E;text-decoration:none;box-shadow:0 10px 30px rgba(231,177,136,0.34)">Open fitnexonline.com</a>
+          <a href="#" style="font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;border:1px solid #564A3A;text-decoration:none;background:#1C1815">Case study</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Cartify" style="position:relative;padding:clamp(48px,8vh,100px) clamp(18px,5vw,72px)">
+    <div data-glow="0.4" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;bottom:-34%;width:100%;height:70%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(185,143,82,0.616), rgba(185,143,82,0.181) 52%, rgba(11,10,9,0) 78%)"></div>
+      <div style="position:absolute;left:50%;bottom:-16%;width:40%;height:36%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(232,229,187,0.616), rgba(232,229,187,0.181) 48%, rgba(11,10,9,0) 82%)"></div>
+    </div>
+    <div style="position:relative;max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px);align-items:flex-end">
+      <div style="flex:1 1 300px;min-width:0;max-width:480px">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px">
+          <span style="font-size:14px;font-weight:600;color:#E8E5BB">Cartify</span>
+          <span style="font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;border:1px dashed #564A3A;color:#C7BDAF">Demo project</span>
+        </div>
+        <h2 style="margin:10px 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,48px);line-height:1;letter-spacing:-0.035em">Cartify</h2>
+        <p style="margin:14px 0 0;font-size:17px;line-height:1.5;max-width:46ch;color:#C7BDAF">A storefront that takes a real payment: browse, basket, sign-in, Stripe checkout. Built to prove the commerce path works, not to run a business.</p>
+        <div style="margin-top:14px;font-size:14px;color:#B3A99C">Next.js · TypeScript · Stripe · Clerk</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
+          <a href="https://next-ecommerce-eta-nine.vercel.app" style="font-size:15px;font-weight:600;padding:11px 20px;border-radius:999px;border:1px solid #564A3A;text-decoration:none;background:#1C1815">Open the demo</a>
+          <a href="https://github.com/heistifeh/next-ecommerce" style="font-size:15px;font-weight:600;padding:11px 20px;border-radius:999px;border:1px solid #564A3A;text-decoration:none;background:#1C1815">Source on GitHub</a>
+        </div>
+      </div>
+      <div data-stage="" style="flex:1 1 420px;min-width:0;position:relative;height:clamp(200px,24vw,320px)">
+        <div data-screen="" data-rot="-5" data-order="2" style="position:absolute;left:26%;bottom:12%;width:20%;transform:translateX(-50%) rotate(-5deg);z-index:1;padding:4px;border-radius:16px;background:#1C1815;border:1px solid #332C24;box-shadow:0 20px 40px rgba(0,0,0,0.6);filter:brightness(0.7) saturate(0.88)">
+          <img src="img/img-7856.jpg" alt="Cartify search results" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:13px" />
+        </div>
+        <div data-screen="" data-rot="0" data-order="0" style="position:absolute;left:48%;bottom:0;width:26%;transform:translateX(-50%) rotate(0deg);z-index:4;padding:5px;border-radius:22px;background:#1C1815;border:1px solid #463C30;box-shadow:0 34px 64px rgba(0,0,0,0.64), inset 0 1px 0 rgba(232,229,187,0.24)">
+          <img src="img/img-7848.jpg" alt="Cartify product listing" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px" />
+        </div>
+        <div data-screen="" data-rot="5" data-order="1" style="position:absolute;left:70%;bottom:9%;width:21%;transform:translateX(-50%) rotate(5deg);z-index:2;padding:4px;border-radius:18px;background:#1C1815;border:1px solid #332C24;box-shadow:0 24px 46px rgba(0,0,0,0.6);filter:brightness(0.82)">
+          <img src="img/img-7854.jpg" alt="Cartify Stripe payment step" style="width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:15px" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showConceptWork }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="Voltra concept" style="position:relative;padding:clamp(40px,6vh,72px) clamp(18px,5vw,72px)">
+      <div style="max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between">
+        <div style="flex:1 1 320px">
+          <div style="font-size:13px;font-weight:600;color:#8A8177">Concept work — not shipped</div>
+          <h3 style="margin:8px 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,30px);letter-spacing:-0.025em">Voltra</h3>
+          <p style="margin:10px 0 0;font-size:16px;line-height:1.5;max-width:54ch;color:#C7BDAF">A Tesla-focused investing concept with a private-banking tone, taken as far as a clickable prototype.</p>
+        </div>
+        <div style="flex:0 1 320px;min-height:120px;border:1px dashed #564A3A;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#8A8177;padding:20px;text-align:center">prototype screens — to be supplied</div>
+      </div>
+    </section>
+  </sc-if>
+
+  <section id="stack" data-screen-label="Front end to system" style="position:relative;padding:clamp(64px,10vh,130px) clamp(18px,5vw,72px)">
+    <div data-glow="0.36" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;bottom:-46%;width:130%;height:92%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(185,143,82,0.616), rgba(185,143,82,0.181) 54%, rgba(11,10,9,0) 80%)"></div>
+    </div>
+    <div style="position:relative;max-width:980px;margin:0 auto">
+      <h2 style="margin:0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,60px);line-height:1;letter-spacing:-0.035em;max-width:22ch">Front end to system: wallet funding, all the way down</h2>
+      <p style="margin:16px 0 clamp(30px,5vh,54px);font-size:17px;line-height:1.55;max-width:62ch;color:#C7BDAF">One real feature from Insta-Delivery, traced through every layer he touches. When it breaks, he can find it and fix it at any one of them.</p>
+      <ol style="list-style:none;margin:0;padding:0;position:relative">
+        <div aria-hidden="true" style="position:absolute;left:7px;top:14px;bottom:14px;width:2px;background:linear-gradient(to bottom, rgba(226,200,156,0) 0%, rgba(226,200,156,0.45) 12%, rgba(226,200,156,0.45) 88%, rgba(226,200,156,0) 100%)"></div>
+        <li data-layer="" style="display:grid;grid-template-columns:16px 1fr;gap:clamp(16px,2.4vw,30px);padding:clamp(16px,2.4vh,24px) 0">
+          <span data-dot="" aria-hidden="true" style="width:16px;height:16px;border-radius:50%;background:#332C24;margin-top:6px"></span>
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline">
+              <span style="font-size:13px;font-weight:600;color:#8A8177;font-variant-numeric:tabular-nums">01</span>
+              <span style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(19px,2vw,25px);letter-spacing:-0.02em">Screen — "Fund wallet"</span>
+            </div>
+            <p style="margin:8px 0 0;font-size:16px;line-height:1.55;max-width:58ch;color:#C7BDAF">Amount sheet, method picker, and the confirmation state the user actually trusts.</p>
+          </div>
+        </li>
+        <li data-layer="" style="display:grid;grid-template-columns:16px 1fr;gap:clamp(16px,2.4vw,30px);padding:clamp(16px,2.4vh,24px) 0">
+          <span data-dot="" aria-hidden="true" style="width:16px;height:16px;border-radius:50%;background:#332C24;margin-top:6px"></span>
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline">
+              <span style="font-size:13px;font-weight:600;color:#8A8177;font-variant-numeric:tabular-nums">02</span>
+              <span style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(19px,2vw,25px);letter-spacing:-0.02em">Component — React Native + TypeScript</span>
+            </div>
+            <p style="margin:8px 0 0;font-size:16px;line-height:1.55;max-width:58ch;color:#C7BDAF">Typed form state, validation, an optimistic pending row, error and retry paths.</p>
+          </div>
+        </li>
+        <li data-layer="" style="display:grid;grid-template-columns:16px 1fr;gap:clamp(16px,2.4vw,30px);padding:clamp(16px,2.4vh,24px) 0">
+          <span data-dot="" aria-hidden="true" style="width:16px;height:16px;border-radius:50%;background:#332C24;margin-top:6px"></span>
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline">
+              <span style="font-size:13px;font-weight:600;color:#8A8177;font-variant-numeric:tabular-nums">03</span>
+              <span style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(19px,2vw,25px);letter-spacing:-0.02em">State — Redux slice, Supabase session</span>
+            </div>
+            <p style="margin:8px 0 0;font-size:16px;line-height:1.55;max-width:58ch;color:#C7BDAF">Balance is one source of truth, shared by checkout, transfers and vendor earnings.</p>
+          </div>
+        </li>
+        <li data-layer="" style="display:grid;grid-template-columns:16px 1fr;gap:clamp(16px,2.4vw,30px);padding:clamp(16px,2.4vh,24px) 0">
+          <span data-dot="" aria-hidden="true" style="width:16px;height:16px;border-radius:50%;background:#332C24;margin-top:6px"></span>
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline">
+              <span style="font-size:13px;font-weight:600;color:#8A8177;font-variant-numeric:tabular-nums">04</span>
+              <span style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(19px,2vw,25px);letter-spacing:-0.02em">API — Node service</span>
+            </div>
+            <p style="margin:8px 0 0;font-size:16px;line-height:1.55;max-width:58ch;color:#C7BDAF">Initialise funding, verify the provider webhook, write the ledger entry once — idempotently.</p>
+            <div style="margin-top:12px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.7;color:#E8D2A6;background:#1C1815;border:1px solid #332C24;border-radius:10px;padding:12px 14px;overflow-x:auto">POST /wallet/fund → { reference }<br />POST /wallet/webhook → verify(sig) → ledger.insert(once)</div>
+          </div>
+        </li>
+        <li data-layer="" style="display:grid;grid-template-columns:16px 1fr;gap:clamp(16px,2.4vw,30px);padding:clamp(16px,2.4vh,24px) 0">
+          <span data-dot="" aria-hidden="true" style="width:16px;height:16px;border-radius:50%;background:#332C24;margin-top:6px"></span>
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline">
+              <span style="font-size:13px;font-weight:600;color:#8A8177;font-variant-numeric:tabular-nums">05</span>
+              <span style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(19px,2vw,25px);letter-spacing:-0.02em">Data — Postgres</span>
+            </div>
+            <p style="margin:8px 0 0;font-size:16px;line-height:1.55;max-width:58ch;color:#C7BDAF">wallets, ledger_entries, referrals — the referral feature released behind a flag, then widened.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section data-screen-label="Recommendations" style="position:relative;padding:clamp(56px,8vh,110px) clamp(18px,5vw,72px)">
+    <div style="max-width:1280px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between;margin-bottom:clamp(24px,3.6vh,40px)">
+        <h2 style="margin:0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,60px);line-height:1;letter-spacing:-0.035em">Recommendations</h2>
+        <span style="font-size:12px;font-weight:600;color:#8A8177;border:1px dashed #564A3A;border-radius:999px;padding:6px 12px">placeholder — real quotes to be supplied</span>
+      </div>
+      <div style="display:grid;gap:clamp(14px,1.6vw,20px);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+        <div style="background:linear-gradient(180deg,#201B15 0%,#120F0C 100%);border:1px solid #332C24;border-radius:16px;padding:clamp(20px,2.2vw,28px);box-shadow:inset 0 1px 0 rgba(232,210,166,0.45), 0 30px 60px rgba(0,0,0,0.45);display:flex;flex-direction:column;gap:16px">
+          <p style="margin:0;font-size:17px;line-height:1.55;max-width:42ch">“Quote to be supplied — lead with the one that speaks to a delivered outcome.”</p>
+          <div style="margin-top:auto">
+            <div style="font-weight:700;font-size:16px">Name to be supplied</div>
+            <div style="font-size:14px;color:#8A8177">Title, Company</div>
+            <div style="font-size:13px;color:#E8D2A6;margin-top:6px">Managed him directly</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(180deg,#201B15 0%,#120F0C 100%);border:1px solid #332C24;border-radius:16px;padding:clamp(20px,2.2vw,28px);box-shadow:inset 0 1px 0 rgba(232,210,166,0.45), 0 30px 60px rgba(0,0,0,0.45);display:flex;flex-direction:column;gap:16px">
+          <p style="margin:0;font-size:17px;line-height:1.55;max-width:42ch">“Quote to be supplied — reliability under pressure, in their own words.”</p>
+          <div style="margin-top:auto">
+            <div style="font-weight:700;font-size:16px">Name to be supplied</div>
+            <div style="font-size:14px;color:#8A8177">Title, Company</div>
+            <div style="font-size:13px;color:#E8D2A6;margin-top:6px">Worked alongside him</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(180deg,#201B15 0%,#120F0C 100%);border:1px solid #332C24;border-radius:16px;padding:clamp(20px,2.2vw,28px);box-shadow:inset 0 1px 0 rgba(232,210,166,0.45), 0 30px 60px rgba(0,0,0,0.45);display:flex;flex-direction:column;gap:16px">
+          <p style="margin:0;font-size:17px;line-height:1.55;max-width:42ch">“Quote to be supplied — ownership and follow-through. Cut this card if only two real quotes arrive.”</p>
+          <div style="margin-top:auto">
+            <div style="font-weight:700;font-size:16px">Name to be supplied</div>
+            <div style="font-size:14px;color:#8A8177">Title, Company</div>
+            <div style="font-size:13px;color:#E8D2A6;margin-top:6px">Mentored by him</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-screen-label="Contact" style="position:relative;padding:clamp(64px,11vh,140px) clamp(18px,5vw,72px) clamp(40px,6vh,72px)">
+    <div data-glow="0.7" aria-hidden="true" style="position:absolute;inset:-12% 0;pointer-events:none;mix-blend-mode:screen">
+      <div style="position:absolute;left:50%;bottom:-36%;width:120%;height:86%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(185,143,82,0.741), rgba(185,143,82,0.236) 54%, rgba(11,10,9,0) 80%)"></div>
+      <div style="position:absolute;left:50%;bottom:-18%;width:48%;height:42%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(226,200,156,0.741), rgba(226,200,156,0.327) 46%, rgba(11,10,9,0) 84%)"></div>
+    </div>
+    <div style="position:relative;max-width:1080px;margin:0 auto">
+      <h2 style="margin:0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(34px,5.6vw,86px);line-height:0.94;letter-spacing:-0.04em;max-width:16ch">Have a product problem? Let's talk.</h2>
+      <a href="mailto:hello@boluwatifeosineye.com" style="display:inline-block;margin-top:clamp(22px,3.4vh,34px);font-size:17px;font-weight:700;padding:16px 32px;border-radius:999px;background:linear-gradient(180deg,#EFDDB6,#B98F52);color:#241B0E;text-decoration:none;box-shadow:0 16px 44px rgba(226,200,156,0.4)">Start a conversation</a>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,5vw,72px);margin-top:clamp(32px,5vh,56px)">
+        <div style="flex:1 1 260px">
+          <div style="font-size:14px;color:#8A8177;margin-bottom:8px">Availability</div>
+          <div style="font-size:17px;line-height:1.5;max-width:34ch">Open to full-time and contract work. Lagos, Nigeria — working remote with teams anywhere.</div>
+        </div>
+        <div style="flex:1 1 260px">
+          <div style="font-size:14px;color:#8A8177;margin-bottom:8px">Elsewhere</div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:17px">
+            <a href="https://github.com/heistifeh">github.com/heistifeh</a>
+            <a href="https://linkedin.com/in/boluwatifeosineye">linkedin.com/in/boluwatifeosineye</a>
+            <a href="https://boluwatifeosineye.com">boluwatifeosineye.com</a>
+          </div>
+        </div>
+        <div style="flex:1 1 200px">
+          <div style="font-size:14px;color:#8A8177;margin-bottom:8px">Résumé</div>
+          <a href="#" style="display:inline-block;font-size:15px;font-weight:600;padding:11px 20px;border-radius:999px;border:1px solid #564A3A;text-decoration:none;background:#1C1815">Download PDF</a>
+        </div>
+      </div>
+      <div style="margin-top:clamp(40px,6vh,80px);padding-top:20px;border-top:1px solid rgba(232,210,166,0.18);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:13px;color:#8A8177">
+        <span>Boluwatife Osineye — Mobile App Developer</span>
+        <span>React Native · React · Next.js · Node</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;glowIntensity&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:1.4,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Art direction&quot;},&quot;stillMode&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;showConceptWork&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showConceptWork: this.props.showConceptWork ?? false };
+  }
+
+  componentDidMount() {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.still = !!this.props.stillMode || reduce;
+    const gi = this.props.glowIntensity ?? 1;
+
+    this.glows = Array.from(document.querySelectorAll("[data-glow]"));
+    this.glows.forEach(g => {
+      const s = parseFloat(g.getAttribute("data-glow")) || 1;
+      g.dataset.base = String(Math.max(0, Math.min(1, 1.0 * s * gi)));
+      g.style.opacity = g.dataset.base;
+    });
+
+    this.screens = Array.from(document.querySelectorAll("[data-screen]"));
+    this.stages = Array.from(document.querySelectorAll("[data-stage]"));
+    this.layers = Array.from(document.querySelectorAll("[data-layer]"));
+    this.screens.concat(this.stages).forEach(el => { el.dataset.orig = el.getAttribute("style") || ""; });
+
+    this.baseT = el => this.compact ? "" : "translateX(-50%) rotate(" + (el.getAttribute("data-rot") || 0) + "deg)";
+
+    this.layout = () => {
+      const compact = window.innerWidth < 880;
+      if (compact === this.compact) return;
+      this.compact = compact;
+      this.stages.forEach(s => {
+        s.setAttribute("style", s.dataset.orig + (compact ? ";position:relative;height:auto;display:flex;gap:12px;overflow-x:auto;padding:2px 0 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch" : ""));
+      });
+      this.screens.forEach(el => {
+        el.setAttribute("style", el.dataset.orig + (compact ? ";position:relative;left:auto;bottom:auto;width:auto;flex:0 0 56%;transform:none;filter:none;scroll-snap-align:center" : ""));
+        if (el.dataset.settled === "1") { el.style.opacity = "1"; el.style.transform = this.baseT(el); }
+        else if (!this.still) { el.style.opacity = "0"; el.style.transform = this.baseT(el) + " translate3d(0,34px,0) scale(0.96)"; }
+      });
+    };
+    this.layout();
+    window.addEventListener("resize", this.layout, { passive: true });
+
+    if (!this.still) {
+      this.settle = el => {
+        const order = parseInt(el.getAttribute("data-order") || "0", 10);
+        setTimeout(() => {
+          el.style.transition = "transform 840ms cubic-bezier(0.16,0.72,0.24,1), opacity 520ms ease-out";
+          el.style.transform = this.baseT(el);
+          el.style.opacity = "1";
+          el.dataset.settled = "1";
+          setTimeout(() => { el.style.transition = "none"; }, 900);
+        }, 40 + order * 95);
+      };
+      this.settleIO = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          this.settleIO.unobserve(e.target);
+          this.settle(e.target);
+        });
+      }, { rootMargin: "0px 0px -4% 0px", threshold: 0.02 });
+      const hero = document.querySelector("main section");
+      this.screens.forEach(el => {
+        el.style.willChange = "transform,opacity";
+        if (hero && hero.contains(el)) this.settle(el);
+        else this.settleIO.observe(el);
+      });
+    }
+
+    // nothing stays hidden if the observers never fire (background tab, capture, print)
+    this.reveal = () => {
+      this.screens.forEach(el => { el.style.transition = "none"; el.style.opacity = "1"; el.style.transform = this.baseT(el); el.dataset.settled = "1"; });
+    };
+    this.safety = setTimeout(() => {
+      if (this.screens.some(el => getComputedStyle(el).opacity === "0")) this.reveal();
+    }, 1200);
+    this.onVis = () => { if (document.visibilityState === "visible") this.dirty = true; else this.reveal(); };
+    document.addEventListener("visibilitychange", this.onVis);
+    window.addEventListener("beforeprint", this.reveal);
+
+    this.live = new Set();
+    this.viewIO = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) this.live.add(e.target); else this.live.delete(e.target); });
+    }, { rootMargin: "25% 0px 25% 0px" });
+    this.glows.forEach(g => this.viewIO.observe(g));
+
+    this.geo = new Map();
+    this.measure = () => {
+      this.glows.forEach(g => {
+        const s = g.parentElement;
+        this.geo.set(g, { top: s.offsetTop, h: s.offsetHeight || 1 });
+      });
+      if (this.layers.length) {
+        const host = this.layers[0].closest("section");
+        this.stackGeo = { top: host.offsetTop, h: host.offsetHeight || 1 };
+      }
+      this.dirty = true;
+    };
+    this.measure();
+    window.addEventListener("load", this.measure);
+    window.addEventListener("resize", this.measure, { passive: true });
+    this.onScroll = () => { this.dirty = true; };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+
+    // a collage in view never freezes: each screen keeps drifting at its own depth and pace
+    this.drifting = new Set();
+    this.stageIO = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        const kids = Array.from(e.target.querySelectorAll("[data-screen]"));
+        kids.forEach(k => e.isIntersecting ? this.drifting.add(k) : this.drifting.delete(k));
+      });
+    }, { rootMargin: "12% 0px 12% 0px", threshold: 0.01 });
+    this.stages.forEach(s => this.stageIO.observe(s));
+    this.screens.forEach((el, i) => {
+      const order = parseInt(el.getAttribute("data-order") || "0", 10);
+      const depth = 1 + order * 0.42;               // outer, dimmer screens travel further
+      el.dataset.ampY = (2.1 * depth).toFixed(2);
+      el.dataset.ampR = (0.14 * depth).toFixed(3);
+      el.dataset.per = (13 + order * 2.6 + (i % 3) * 1.7).toFixed(2);
+      el.dataset.ph = ((i * 1.37) % 6.283).toFixed(3);
+    });
+
+    this.frame = ts => {
+      const t = (ts || 0) / 1000;
+      if (!this.still) {
+        // the glow keeps breathing on top of its scroll-driven position
+        this.live.forEach(g => {
+          const q = parseFloat(g.dataset.q || "0");
+          const near = 1 - Math.abs(q);
+          const breath = Math.sin(t * 0.32 + (parseFloat(g.getAttribute("data-glow")) || 1) * 2.1);
+          g.style.transform = "translate3d(0," + (-q * 44 + breath * 5).toFixed(2) + "px,0) scale(" + (1 + near * 0.07 + breath * 0.012).toFixed(4) + ")";
+          g.style.opacity = (parseFloat(g.dataset.base) * (0.7 + near * 0.3) * (0.955 + breath * 0.045)).toFixed(3);
+        });
+      }
+      if (!this.still && !this.compact) {
+        this.drifting.forEach(el => {
+          if (el.dataset.settled !== "1") return;
+          const w = 6.283 / parseFloat(el.dataset.per);
+          const ph = parseFloat(el.dataset.ph);
+          const y = parseFloat(el.dataset.ampY) * Math.sin(t * w + ph);
+          const r = parseFloat(el.dataset.ampR) * Math.sin(t * w * 0.62 + ph * 1.3);
+          const sc = 1 + 0.0035 * Math.sin(t * w * 0.48 + ph);
+          el.style.transform = this.baseT(el) + " translate3d(0," + y.toFixed(2) + "px,0) rotate(" + r.toFixed(3) + "deg) scale(" + sc.toFixed(4) + ")";
+        });
+      }
+      if (!this.dirty) { this.raf = requestAnimationFrame(this.frame); return; }
+      this.dirty = false;
+      const vh = window.innerHeight;
+      const mid = (window.scrollY || window.pageYOffset) + vh * 0.5;
+      if (!this.still) {
+        this.live.forEach(g => {
+          const gg = this.geo.get(g) || { top: 0, h: 1 };
+          const q = Math.max(-1, Math.min(1, ((mid - gg.top) / gg.h - 0.5) * 2));
+          g.dataset.q = q.toFixed(4);
+        });
+      }
+      if (this.layers.length && this.stackGeo) {
+        const p = (mid + vh * 0.12 - this.stackGeo.top) / Math.max(1, this.stackGeo.h * 0.88);
+        this.layers.forEach((l, i) => {
+          const lp = this.still ? 1 : Math.min(1, Math.max(0, (p - i * 0.13) / 0.2));
+          l.style.opacity = (0.4 + lp * 0.6).toFixed(3);
+          const dot = l.querySelector("[data-dot]");
+          if (dot) {
+            const on = lp > 0.5;
+            dot.style.background = on ? "#E0C495" : "#332C24";
+            dot.style.boxShadow = on ? "0 0 0 4px rgba(226,200,156,0.12), 0 0 20px rgba(226,200,156," + (0.6 * lp).toFixed(2) + ")" : "none";
+          }
+        });
+      }
+      if (!this.still) this.raf = requestAnimationFrame(this.frame);
+    };
+    this.frame();
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    clearTimeout(this.safety);
+    document.removeEventListener("visibilitychange", this.onVis);
+    window.removeEventListener("beforeprint", this.reveal);
+    window.removeEventListener("resize", this.layout);
+    window.removeEventListener("resize", this.measure);
+    window.removeEventListener("load", this.measure);
+    window.removeEventListener("scroll", this.onScroll);
+    if (this.settleIO) this.settleIO.disconnect();
+    if (this.viewIO) this.viewIO.disconnect();
+    if (this.stageIO) this.stageIO.disconnect();
+  }
+}
+
+</script>
+</body>
+</html>

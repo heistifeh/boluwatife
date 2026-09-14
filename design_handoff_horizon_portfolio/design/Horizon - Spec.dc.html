@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Horizon — art direction & motion spec</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@600;700;800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html { background: #0E0C0B; }
+  body { margin: 0; background: #0E0C0B; color: #ECE6DC; font-family: Archivo, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  p { text-wrap: pretty; }
+  a { color: #E8D2A6; text-underline-offset: 4px; }
+  a:hover { color: #FFFFFF; }
+  :focus-visible { outline: 2px solid #E8D2A6; outline-offset: 3px; }
+</style>
+</helmet>
+
+<div style="max-width:900px;margin:0 auto;padding:clamp(28px,5vw,72px) clamp(18px,4vw,40px) 96px">
+  <div style="font-size:13px;font-weight:600;color:#E8D2A6">Horizon — direction 3</div>
+  <h1 style="margin:10px 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(30px,5vw,52px);line-height:1;letter-spacing:-0.035em">Art direction, staging and motion spec</h1>
+  <p style="margin:16px 0 0;font-size:17px;line-height:1.6;color:#C7BDAF;max-width:70ch">One warm horizon glow, low in every frame, with real product screens staged in front of it. Deep near-black everywhere else. Every dramatic beat is attached to a real product, a real number or a real outcome. Built as <a href="Tife%20Osineye%20Horizon.dc.html">the desktop site</a> and <a href="Tife%20Osineye%20Horizon%20-%20Mobile.dc.html">mobile compositions</a>.</p>
+  <p style="margin:14px 0 0;font-size:15px;line-height:1.6;color:#8A8177;max-width:70ch;border-left:2px solid #564A3A;padding-left:14px">Note: the reference screenshot described in the brief did not come through with this message, so the glow was built from the brief's written description (sunrise/eclipse arc, warm amber to deep orange-red, screens staged in its light). Send the image and I will match the falloff and the staging angles to it directly.</p>
+
+  <h2 style="margin:clamp(40px,6vh,64px) 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,32px);letter-spacing:-0.03em">1 · Colour tokens</h2>
+  <div style="display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));margin-top:20px">
+    <div style="border:1px solid #332C24;border-radius:12px;overflow:hidden;background:#1C1815">
+      <div style="height:56px;background:#0B0A09"></div>
+      <div style="padding:10px 12px"><div style="font-size:14px;font-weight:700">--ink</div><div style="font-size:13px;color:#8A8177">#0B0A09 · page base</div></div>
+    </div>
+    <div style="border:1px solid #332C24;border-radius:12px;overflow:hidden;background:#1C1815">
+      <div style="height:56px;background:#1C1815"></div>
+      <div style="padding:10px 12px"><div style="font-size:14px;font-weight:700">--raised</div><div style="font-size:13px;color:#8A8177">#1C1815 · cards, frame chrome</div></div>
+    </div>
+    <div style="border:1px solid #332C24;border-radius:12px;overflow:hidden;background:#1C1815">
+      <div style="height:56px;background:#332C24"></div>
+      <div style="padding:10px 12px"><div style="font-size:14px;font-weight:700">--edge</div><div style="font-size:13px;color:#8A8177">#332C24 · hairlines, borders</div></div>
+    </div>
+    <div style="border:1px solid #332C24;border-radius:12px;overflow:hidden;background:#1C1815">
+      <div style="height:56px;background:#8A8177"></div>
+      <div style="padding:10px 12px"><div style="font-size:14px;font-weight:700">--dim</div><div style="font-size:13px;color:#8A8177">#8A8177 · secondary text</div></div>
+    </div>
+    <div style="border:1px solid #332C24;border-radius:12px;overflow:hidden;background:#1C1815">
+      <div style="height:56px;background:#ECE6DC"></div>
+      <div style="padding:10px 12px"><div style="font-size:14px;font-weight:700">--paper</div><div style="font-size:13px;color:#8A8177">#ECE6DC · primary text</div></div>
+    </div>
+    <div style="border:1px solid #332C24;border-radius:12px;overflow:hidden;background:#1C1815">
+      <div style="height:56px;background:linear-gradient(90deg,#E0C495,#B98F52)"></div>
+      <div style="padding:10px 12px"><div style="font-size:14px;font-weight:700">--glow-1 → --glow-2</div><div style="font-size:13px;color:#8A8177">#E0C495 → #B98F52</div></div>
+    </div>
+  </div>
+  <p style="margin:16px 0 0;font-size:15px;line-height:1.6;color:#C7BDAF;max-width:70ch">Two derived ink values do the heavy lifting in body copy: <span style="color:#C7BDAF;font-weight:600">#C7BDAF</span> for supporting paragraphs (9.4:1 on --ink) and <span style="color:#E8D2A6;font-weight:600">#E8D2A6</span> for metrics and eyebrows (9.7:1). <span style="color:#8A8177">--dim</span> is for labels only, never for a paragraph on top of the glow.</p>
+  <pre style="margin:20px 0 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.75;color:#E8D2A6;background:#1C1815;border:1px solid #332C24;border-radius:12px;padding:16px 18px;overflow-x:auto">:root {
+  --ink:      #0B0A09;
+  --raised:   #1C1815;
+  --edge:     #332C24;
+  --edge-lit: #463C30;   /* border on an anchor screen frame */
+  --dim:      #8A8177;
+  --body:     #C7BDAF;
+  --paper:    #ECE6DC;
+  --glow-1:   #E0C495;
+  --glow-2:   #B98F52;
+  --glow-hot: #F4E9D0;   /* rim highlight only */
+  --accent-ink: #E8D2A6; /* metrics, eyebrows, link hover */
+
+  /* the three glow layers, back to front */
+  --glow-haze: radial-gradient(closest-side,
+      rgba(185,143,82,0.46), rgba(185,143,82,0.15) 54%, rgba(11,10,9,0) 78%);
+  --glow-core: radial-gradient(closest-side,
+      rgba(226,200,156,0.66), rgba(226,200,156,0.28) 44%,
+      rgba(185,143,82,0.07) 70%, rgba(11,10,9,0) 85%);
+  --glow-rim: radial-gradient(closest-side,
+      rgba(244,233,208,0.50), rgba(226,200,156,0.15) 52%, rgba(11,10,9,0) 78%);
+
+  /* elevated card: light falls on the top edge from the section glow */
+  --card-face: linear-gradient(180deg, #201B15 0%, #120F0C 100%);
+  --card-lit: inset 0 1px 0 rgba(226,200,156,0.26), 0 30px 60px rgba(0,0,0,0.45);
+
+  /* warm pill CTA — the one element borrowed from the reference directly */
+  --cta: linear-gradient(180deg, #EFDDB6, #B98F52);
+  --cta-ink: #241B0E;
+  --cta-shadow: 0 16px 44px rgba(226,200,156,0.40);
+
+  /* per-project tint: replaces --glow-1 as the brightest point only,
+     always resolving back down to --glow-2 / --ink at the edge */
+  --tint-isds:    #E8D69B;   /* 232,214,155 — all four ISDS apps */
+  --tint-fitnex:  #E7B188;   /* 231,177,136 — copper, most energetic */
+  --tint-cartify: #E8E5BB;   /* 232,229,187 — champagne-silver, coolest */
+  --tint-voltra:  #DF967C;   /* 223,150,124 — bronze, concept work */
+}</pre>
+
+  <h3 style="margin:clamp(30px,4vh,44px) 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:clamp(18px,2vw,23px);letter-spacing:-0.025em">The two motion layers, stacked without compounding</h3>
+  <p style="margin:12px 0 0;font-size:16px;line-height:1.6;color:#C7BDAF;max-width:70ch">The ambient base is a single fixed, <span style="font-family:ui-monospace,monospace;font-size:14px">position:fixed</span> pair of blurred linear-gradient sheets behind everything (<span style="font-family:ui-monospace,monospace;font-size:14px">z-index:0</span>, page content at 1) — the only blurred elements in the whole design, and the only thing that animates without scroll. Because they live in one fixed, <span style="font-family:ui-monospace,monospace;font-size:14px">contain:strict</span> layer, their 42s/61s transform loops are composited once and never repaint per section. The scroll-tied staging glow stays blur-free radial gradients inside each section, driven on one shared rAF. Ambient touches transform only; staging touches transform and opacity — so the two never write the same property on the same element.</p>
+  <pre style="margin:18px 0 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.75;color:#E8D2A6;background:#1C1815;border:1px solid #332C24;border-radius:12px;padding:16px 18px;overflow-x:auto">/* layer 1 — ambient, everywhere, always, scroll-independent */
+[data-ambient]      position:fixed; inset:0; z-index:0; contain:strict;
+  sheet A           linear-gradient(116deg, gold-1 @0.10 → gold-2 @0.06)
+                    blur(44px); animation: ambientA 42s ease-in-out infinite;
+  sheet B           linear-gradient(94deg,  gold-2 @0.075 → gold-1 @0.05)
+                    blur(64px); animation: ambientB 61s ease-in-out infinite;
+
+/* layer 2 — staging, per section, scroll-tied, blur-free */
+[data-glow="1.3"]   opacity = base × (0.7 + 0.3·nearness)
+                    transform = translate3d(0, −q·44px, 0) scale(1 + 0.07·nearness)
+
+@media (prefers-reduced-motion: reduce) {
+  [data-ambient] > * { animation: none; }   /* sheets hold their pose */
+  /* staging glow stays at its base opacity, no scroll drift */
+}</pre>
+
+  <h2 style="margin:clamp(40px,6vh,64px) 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,32px);letter-spacing:-0.03em">2 · The glow</h2>
+  <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:#C7BDAF;max-width:70ch">Three stacked ellipses, all anchored to the bottom of the section and centred, all pure CSS radial gradients — no <span style="font-family:ui-monospace,monospace;font-size:14px">filter: blur()</span>, no canvas. Blur-free gradients are what keep this at 60fps on a mid-range phone. Within a section, hue never changes — only scale and opacity do; between sections the brightest stop swaps to that project's tint token while the haze and the edge stay on --glow-2 and --ink.</p>
+  <pre style="margin:18px 0 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.75;color:#E8D2A6;background:#1C1815;border:1px solid #332C24;border-radius:12px;padding:16px 18px;overflow-x:auto">/* per section: .glow > three divs, each translateX(-50%), border-radius:50% */
+haze  width 146–166%  height 82–94%  bottom -26 to -32%  --glow-haze
+core  width  60– 78%  height 48–58%  bottom -12 to -14%  --glow-core
+rim   width  32– 40%  height 20–26%  bottom  -5 to  -6%  --glow-rim   (hero, Fitnex, Customer only)</pre>
+  <div style="margin-top:18px;border:1px solid #332C24;border-radius:12px;overflow:hidden">
+    <div style="display:grid;grid-template-columns:1.4fr 0.8fr 2fr;gap:12px;padding:12px 16px;background:#1C1815;font-size:13px;font-weight:700;color:#8A8177">
+      <span>Section</span><span>Scale</span><span>Why</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1.4fr 0.8fr 2fr;gap:12px;padding:12px 16px;border-top:1px solid #332C24;font-size:14px"><span>Hero</span><span style="font-variant-numeric:tabular-nums">1.15</span><span style="color:#C7BDAF">Opening statement, six screens in the light</span></div>
+    <div style="display:grid;grid-template-columns:1.4fr 0.8fr 2fr;gap:12px;padding:12px 16px;border-top:1px solid #332C24;font-size:14px"><span>Fitnex</span><span style="font-variant-numeric:tabular-nums">1.30</span><span style="color:#C7BDAF">Most visual weight after the hero — solo-build evidence</span></div>
+    <div style="display:grid;grid-template-columns:1.4fr 0.8fr 2fr;gap:12px;padding:12px 16px;border-top:1px solid #332C24;font-size:14px"><span>ISDS Customer</span><span style="font-variant-numeric:tabular-nums">0.85</span><span style="color:#C7BDAF">Flagship live app</span></div>
+    <div style="display:grid;grid-template-columns:1.4fr 0.8fr 2fr;gap:12px;padding:12px 16px;border-top:1px solid #332C24;font-size:14px"><span>Vendors, Driver</span><span style="font-variant-numeric:tabular-nums">0.80</span><span style="color:#C7BDAF">Live, equal billing</span></div>
+    <div style="display:grid;grid-template-columns:1.4fr 0.8fr 2fr;gap:12px;padding:12px 16px;border-top:1px solid #332C24;font-size:14px"><span>Customer B2B</span><span style="font-variant-numeric:tabular-nums">0.62</span><span style="color:#C7BDAF">In development — visibly less light</span></div>
+    <div style="display:grid;grid-template-columns:1.4fr 0.8fr 2fr;gap:12px;padding:12px 16px;border-top:1px solid #332C24;font-size:14px"><span>Cartify</span><span style="font-variant-numeric:tabular-nums">0.40</span><span style="color:#C7BDAF">Demo — honest hierarchy, three screens</span></div>
+    <div style="display:grid;grid-template-columns:1.4fr 0.8fr 2fr;gap:12px;padding:12px 16px;border-top:1px solid #332C24;font-size:14px"><span>Track record / stack</span><span style="font-variant-numeric:tabular-nums">0.36–0.42</span><span style="color:#C7BDAF">Atmosphere behind reading content only</span></div>
+    <div style="display:grid;grid-template-columns:1.4fr 0.8fr 2fr;gap:12px;padding:12px 16px;border-top:1px solid #332C24;font-size:14px"><span>Contact</span><span style="font-variant-numeric:tabular-nums">0.70</span><span style="color:#C7BDAF">Closes the rhythm, calmer than the hero</span></div>
+    <div style="display:grid;grid-template-columns:1.4fr 0.8fr 2fr;gap:12px;padding:12px 16px;border-top:1px solid #332C24;font-size:14px"><span>Proof bar, recommendations</span><span style="font-variant-numeric:tabular-nums">0</span><span style="color:#C7BDAF">No glow — pure legibility</span></div>
+  </div>
+
+  <h2 style="margin:clamp(40px,6vh,64px) 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,32px);letter-spacing:-0.03em">3 · Screen collage staging</h2>
+  <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:#C7BDAF;max-width:70ch">A fan, not a grid. Every screen is absolutely positioned inside a stage by percentage of stage width, with <span style="font-family:ui-monospace,monospace;font-size:14px">left</span> + <span style="font-family:ui-monospace,monospace;font-size:14px">translateX(-50%)</span>, so the whole composition scales with the viewport. Depth is read three ways at once: width, distance off the baseline, and brightness. Adjacent screens always overlap — no visible gap between neighbours.</p>
+  <pre style="margin:18px 0 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.75;color:#E8D2A6;background:#1C1815;border:1px solid #332C24;border-radius:12px;padding:16px 18px;overflow-x:auto">5-screen fan (product moments)      left    width   bottom  rotate  brightness  z
+  far-left                          24%     12.5%   16%     -7deg   0.68        1
+  mid-left                          36%     15.5%    6%   -3.5deg   0.86        3
+  ANCHOR                            50%     19.0%    0%      0deg   1.00        6
+  mid-right                         64%     15.5%    6%    3.5deg   0.86        3
+  far-right                         76%     12.5%   16%      7deg   0.68        1
+
+6-screen fan, two anchors (hero, Fitnex)
+  far-left  17%/12.0%/19%/-9deg/0.64    left    30%/14–15%/8–10%/-5deg/0.82
+  ANCHOR A  43.5%/18.5%/0%/-1deg/1.00   ANCHOR B 60%/17–19.5%/4–5%/+2–3deg/1.00
+  right     74%/14.5%/8–12%/+6deg/0.84  far-right 85.5%/11.5%/19–21%/+10deg/0.64
+
+frame chrome   anchor: 6px --raised padding, 28px radius, 1px --edge-lit,
+               0 48px 90px rgba(0,0,0,.66) + inset 0 1px 0 rgba(235,215,175,.30)
+               support: 4–5px padding, 18–22px radius, 1px --edge, no inset light
+screens        9/19 aspect, object-fit cover, object-position top
+
+mobile (&lt; 880px)  the fan becomes one 212px anchor centred at the baseline with two
+                  120px screens behind at ±36% and brightness 0.6 (hero), or a
+                  horizontal snap rail 196 / 150 / 132px (product moments).</pre>
+
+  <h2 style="margin:clamp(40px,6vh,64px) 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,32px);letter-spacing:-0.03em">4 · Type</h2>
+  <div style="margin-top:18px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))">
+    <div style="background:linear-gradient(180deg,#201B15,#120F0C);border:1px solid #332C24;border-radius:14px;padding:20px;box-shadow:inset 0 1px 0 rgba(226,200,156,0.22)">
+      <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-0.04em;line-height:0.95">Schibsted Grotesk</div>
+      <p style="margin:12px 0 0;font-size:15px;line-height:1.55;color:#C7BDAF">Display: 800 weight, tracking −0.035 to −0.05em. Names, headlines, product names, metrics. Hero 42–112px, product names 38–92px, section heads 30–60px.</p>
+    </div>
+    <div style="background:linear-gradient(180deg,#201B15,#120F0C);border:1px solid #332C24;border-radius:14px;padding:20px;box-shadow:inset 0 1px 0 rgba(226,200,156,0.22)">
+      <div style="font-weight:600;font-size:34px;letter-spacing:-0.02em">Archivo</div>
+      <p style="margin:12px 0 0;font-size:15px;line-height:1.55;color:#C7BDAF">Body and UI: 400–700. Paragraphs 16–20px / 1.45–1.6, max 62ch (under 75 characters everywhere). <span style="font-variant-numeric:tabular-nums;font-weight:700">tabular-nums</span> on the stat line and every metric.</p>
+    </div>
+  </div>
+
+  <h2 style="margin:clamp(40px,6vh,64px) 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,32px);letter-spacing:-0.03em">5 · Motion</h2>
+  <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:#C7BDAF;max-width:70ch">One signature move, repeated with intent. Cards, text and nav never move; nothing hovers or lifts.</p>
+  <div style="margin-top:20px;display:grid;gap:14px">
+    <div style="background:linear-gradient(180deg,#201B15,#120F0C);border:1px solid #332C24;border-radius:14px;padding:20px;box-shadow:inset 0 1px 0 rgba(226,200,156,0.22)">
+      <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:19px;letter-spacing:-0.02em">Glow drift — the continuous thread</div>
+      <p style="margin:10px 0 0;font-size:15px;line-height:1.6;color:#C7BDAF;max-width:66ch">Per section, <span style="font-family:ui-monospace,monospace;font-size:13.5px">q = clamp(((scrollMid − sectionTop) / sectionHeight − 0.5) × 2, −1, 1)</span>. Then <span style="font-family:ui-monospace,monospace;font-size:13.5px">translateY = −q × 44px</span>, <span style="font-family:ui-monospace,monospace;font-size:13.5px">scale = 1 + (1 − |q|) × 0.07</span>, <span style="font-family:ui-monospace,monospace;font-size:13.5px">opacity = base × (0.7 + (1 − |q|) × 0.3)</span>. The glow is brightest and largest when its section is centred, and sinks as it leaves. Only transform and opacity — never layout properties. Driven by one rAF loop with a dirty flag set on scroll, section geometry cached on resize, and an IntersectionObserver (±25% margin) so off-screen glows cost nothing.</p>
+    </div>
+    <div style="background:linear-gradient(180deg,#201B15,#120F0C);border:1px solid #332C24;border-radius:14px;padding:20px;box-shadow:inset 0 1px 0 rgba(226,200,156,0.22)">
+      <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:19px;letter-spacing:-0.02em">Screens settling into light</div>
+      <p style="margin:10px 0 0;font-size:15px;line-height:1.6;color:#C7BDAF;max-width:66ch">Each screen enters from <span style="font-family:ui-monospace,monospace;font-size:13.5px">translateY(34px) scale(0.96) opacity 0</span> to rest on <span style="font-family:ui-monospace,monospace;font-size:13.5px">transform 840ms cubic-bezier(0.16,0.72,0.24,1)</span>, opacity 520ms ease-out. Depth-staggered by 95ms in <span style="font-family:ui-monospace,monospace;font-size:13.5px">data-order</span>: anchor first, then mid, then far. Weighted and settling, never bouncy. Fires once per screen on intersection (hero settles on load); <span style="font-family:ui-monospace,monospace;font-size:13.5px">will-change</span> is cleared 900ms after arrival so no layer is promoted for longer than it needs.</p>
+    </div>
+    <div style="background:linear-gradient(180deg,#201B15,#120F0C);border:1px solid #332C24;border-radius:14px;padding:20px;box-shadow:inset 0 1px 0 rgba(226,200,156,0.22)">
+      <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:19px;letter-spacing:-0.02em">Front end to system — the one functional use</div>
+      <p style="margin:10px 0 0;font-size:15px;line-height:1.6;color:#C7BDAF;max-width:66ch">Layer progress <span style="font-family:ui-monospace,monospace;font-size:13.5px">lp = clamp((p − i × 0.13) / 0.2, 0, 1)</span> drives row opacity 0.40 → 1.00, and past <span style="font-family:ui-monospace,monospace;font-size:13.5px">lp &gt; 0.5</span> the row's dot switches to --glow-1 with a warm halo. The connector is a 2px vertical gradient of --glow-1 fading at both ends. Light walks the sequence as you read it.</p>
+    </div>
+    <div style="background:linear-gradient(180deg,#201B15,#120F0C);border:1px solid #332C24;border-radius:14px;padding:20px;box-shadow:inset 0 1px 0 rgba(226,200,156,0.22)">
+      <div style="font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:700;font-size:19px;letter-spacing:-0.02em">Reduced motion</div>
+      <p style="margin:10px 0 0;font-size:15px;line-height:1.6;color:#C7BDAF;max-width:66ch"><span style="font-family:ui-monospace,monospace;font-size:13.5px">prefers-reduced-motion: reduce</span> (or the Still mode tweak) drops the rAF loop entirely: every glow sits at its base scale and opacity, every screen is at rest and fully opaque, all five stack layers are lit, and smooth scrolling is off. The still page is the same composition, just held — nothing is hidden behind an animation.</p>
+    </div>
+  </div>
+
+  <h2 style="margin:clamp(40px,6vh,64px) 0 0;font-family:'Schibsted Grotesk',Archivo,sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,32px);letter-spacing:-0.03em">6 · Quality floor</h2>
+  <ul style="margin:16px 0 0;padding-left:22px;display:grid;gap:10px;font-size:16px;line-height:1.6;color:#C7BDAF;max-width:72ch">
+    <li>Screenshots ship at 520px wide, JPEG q86 (~40–70KB each) — the source uploads were 1206×2622 PNGs, roughly 12MB of decoded bitmap each, which is the single biggest threat to the 60fps floor on a glow-heavy page. Anchor screens render at ~270 CSS px, so 520 keeps a 2× buffer.</li>
+    <li>No <span style="font-family:ui-monospace,monospace;font-size:14px">blur()</span> or <span style="font-family:ui-monospace,monospace;font-size:14px">backdrop-filter</span> anywhere except the fixed nav bar. Gradients only.</li>
+    <li>All copy lives in the DOM. Nothing is painted only in canvas.</li>
+    <li>Focus ring is <span style="font-family:ui-monospace,monospace;font-size:14px">2px #E8D2A6</span> plus a 6px --ink halo, so it stays visible over the brightest part of the glow as well as flat black.</li>
+    <li>Body text is full-opacity ink (--body / --paper), never alpha-muted over the glow. Minimum 4.5:1 everywhere, and the dashed "in development" and "placeholder" flags read as chrome, not as decoration.</li>
+    <li>Tweaks on the page: glow intensity (0.5–1.4, scales every section's glow at once), Still mode, and the Voltra concept panel toggle.</li>
+  </ul>
+</div>
+
+</x-dc>
+</body>
+</html>

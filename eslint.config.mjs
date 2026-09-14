@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Read-only design handoff reference — never edited or shipped.
+    "design_handoff_horizon_portfolio/**",
   ]),
 ]);
 

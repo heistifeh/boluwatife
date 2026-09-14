@@ -1,0 +1,137 @@
+.section {
+  position: relative;
+  padding: clamp(56px, 9vh, 120px) clamp(18px, 5vw, 72px) clamp(40px, 6vh, 76px);
+}
+
+.inner {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px dashed var(--edge-strong);
+  color: var(--body);
+}
+
+.name {
+  margin: 10px 0 0;
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.desc {
+  margin: 16px 0 0;
+  font-size: clamp(17px, 1.7vw, 20px);
+  line-height: 1.45;
+  max-width: 52ch;
+  color: var(--body);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 48px);
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: clamp(26px, 4vh, 44px);
+  padding-top: clamp(20px, 3vh, 30px);
+  border-top: 1px solid rgba(234, 208, 138, 0.26);
+}
+
+.claimBlock {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.claim {
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 34ch;
+}
+
+.stack {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--dim-lit);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cta {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 999px;
+  color: var(--cta-ink);
+  text-decoration: none;
+}
+
+.secondary {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--edge-strong);
+  text-decoration: none;
+  background: var(--raised);
+}
+
+@media (max-width: 699px) {
+  .section {
+    padding: 34px 20px 30px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 0;
+    padding-top: 18px;
+  }
+
+  .claimBlock {
+    flex: 1 1 auto;
+  }
+
+  .actions {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .cta,
+  .secondary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .secondary {
+    display: none;
+  }
+}

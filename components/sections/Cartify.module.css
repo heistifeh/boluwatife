@@ -1,0 +1,103 @@
+.section {
+  position: relative;
+  padding: clamp(48px, 8vh, 100px) clamp(18px, 5vw, 72px);
+}
+
+.inner {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: flex-end;
+}
+
+.copy {
+  flex: 1 1 300px;
+  min-width: 0;
+  max-width: 480px;
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tint-cartify);
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px dashed var(--edge-strong);
+  color: var(--body);
+}
+
+.name {
+  margin: 10px 0 0;
+  font-weight: 800;
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.desc {
+  margin: 14px 0 0;
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: 46ch;
+  color: var(--body);
+}
+
+.stack {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--dim-lit);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.action {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 11px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--edge-strong);
+  text-decoration: none;
+  background: var(--raised);
+}
+
+.stageWrap {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+@media (max-width: 699px) {
+  .section {
+    padding: 34px 0 30px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .action {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
