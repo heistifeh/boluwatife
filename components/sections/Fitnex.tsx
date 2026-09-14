@@ -23,12 +23,12 @@ export default function Fitnex() {
           </div>
           <div className={styles.actions}>
             {fitnex.cta && (
-              <a href={fitnex.cta.href} className={styles.cta} style={{ background: fitnex.cta.gradient, boxShadow: fitnex.cta.shadow }}>
+              <a href={fitnex.cta.href} target="_blank" rel="noopener noreferrer" className={styles.cta} style={{ background: fitnex.cta.gradient, boxShadow: fitnex.cta.shadow }}>
                 {fitnex.cta.label}
               </a>
             )}
             {fitnex.secondary && (
-              <a href={fitnex.secondary.href} className={styles.secondary}>
+              <a href={fitnex.secondary.href} target="_blank" rel="noopener noreferrer" className={styles.secondary}>
                 {fitnex.secondary.label}
               </a>
             )}

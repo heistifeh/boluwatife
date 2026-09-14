@@ -34,6 +34,8 @@ export default function ProductSection({ data }: { data: ProductSectionData }) {
               {data.cta && (
                 <a
                   href={data.cta.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.cta}
                   style={{ background: data.cta.gradient, boxShadow: data.cta.shadow }}
                 >
@@ -41,7 +43,7 @@ export default function ProductSection({ data }: { data: ProductSectionData }) {
                 </a>
               )}
               {data.secondary && (
-                <a href={data.secondary.href} className={styles.secondary}>
+                <a href={data.secondary.href} target="_blank" rel="noopener noreferrer" className={styles.secondary}>
                   {data.secondary.label}
                 </a>
               )}

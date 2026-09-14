@@ -236,6 +236,33 @@ export const trackRecordBlock = {
 export const productSections: ProductSection[] = [
   {
     id: "isds",
+    eyebrow: "Insta-Delivery Driver",
+    eyebrowColor: "var(--tint-isds)",
+    name: "ISDS Driver",
+    nameSize: "clamp(38px,6vw,92px)",
+    description: "A rider goes online, takes the next job, and proves the drop-off, on a cheap phone and a patchy connection. Everything here had to survive that.",
+    glow: {
+      weight: 0.8,
+      layers: [
+        { bottom: "-28%", left: "50%", width: "146%", height: "82%", background: "radial-gradient(closest-side, rgba(185,143,82,0.725), rgba(185,143,82,0.218) 54%, rgba(11,10,9,0) 78%)" },
+        { bottom: "-12%", left: "50%", width: "60%", height: "48%", background: "radial-gradient(closest-side, rgba(234,208,138,0.741), rgba(234,208,138,0.399) 44%, rgba(185,143,82,0.109) 70%, rgba(11,10,9,0) 85%)" },
+      ],
+    },
+    stageHeight: "clamp(260px,34vw,470px)",
+    screens: [
+      { src: "/design/img/img-7778.jpg", alt: "Driver message centre", order: 4, rot: -7, left: "24%", bottom: "16%", width: "12%", z: 1, padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid var(--edge)", boxShadow: "0 24px 48px rgba(0,0,0,0.6)", filter: "brightness(0.66) saturate(0.88)", mobile: { width: "128px", padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid #332C24", boxShadow: "0 20px 38px rgba(0,0,0,0.6)", filter: "brightness(0.68) saturate(0.88)" } },
+      { src: "/design/img/img-7776.jpg", alt: "Order ready for pickup", order: 2, rot: -3.5, left: "36%", bottom: "6%", width: "15%", z: 3, padding: "5px", radius: "22px", imgRadius: "18px", border: "1px solid var(--edge)", boxShadow: "0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.16)", filter: "brightness(0.86)", mobile: { width: "140px", padding: "4px", radius: "20px", imgRadius: "17px", border: "1px solid #332C24", boxShadow: "0 22px 42px rgba(0,0,0,0.6)", filter: "brightness(0.78)" } },
+      { src: "/design/img/img-7775.jpg", alt: "Driver online on the map, waiting for orders", order: 0, rot: 0, left: "50%", bottom: "0", width: "18.5%", z: 6, padding: "6px", radius: "28px", imgRadius: "23px", border: "1px solid var(--edge-lit)", boxShadow: "0 48px 90px rgba(0,0,0,0.66), inset 0 1px 0 rgba(234,208,138,0.3)", mobile: { width: "188px", padding: "5px", radius: "28px", imgRadius: "24px", border: "1px solid #463C30", boxShadow: "0 34px 60px rgba(0,0,0,0.66), inset 0 1px 0 rgba(234,208,138,0.3)" } },
+      { src: "/design/img/img-7777.jpg", alt: "Order delivered confirmation", order: 1, rot: 3.5, left: "64%", bottom: "6%", width: "15%", z: 3, padding: "5px", radius: "22px", imgRadius: "18px", border: "1px solid var(--edge)", boxShadow: "0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.16)", filter: "brightness(0.86)", mobile: { width: "152px", padding: "4px", radius: "22px", imgRadius: "19px", border: "1px solid #332C24", boxShadow: "0 24px 46px rgba(0,0,0,0.6)", filter: "brightness(0.86)" } },
+      { src: "/design/img/img-7779.jpg", alt: "Driver performance review", order: 3, rot: 7, left: "76%", bottom: "16%", width: "12%", z: 1, padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid var(--edge)", boxShadow: "0 24px 48px rgba(0,0,0,0.6)", filter: "brightness(0.66) saturate(0.88)", mobile: { width: "120px", padding: "3px", radius: "16px", imgRadius: "13px", border: "1px solid #332C24", boxShadow: "0 18px 34px rgba(0,0,0,0.6)", filter: "brightness(0.6) saturate(0.85)" } },
+    ],
+    claim: "The search and list performance work here is what took minutes out of every run.",
+    claimSize: "clamp(22px,2.4vw,34px)",
+    stack: "React Native · Expo · TypeScript · Node.js · Supabase",
+    cta: { label: "Get the driver app", href: "https://apps.apple.com/ar/app/insta-delivery-driver/id6747667869?l=en-GB", gradient: "linear-gradient(180deg,#F0E2B0,#B98F52)", shadow: "0 10px 30px rgba(234,208,138,0.32)" },
+    secondary: null,
+  },
+  {
     eyebrow: "Insta-Delivery Customer",
     eyebrowColor: "var(--tint-isds)",
     name: "ISDS Customer",
@@ -261,8 +288,8 @@ export const productSections: ProductSection[] = [
     claim: "Live on the App Store, with wallet funding and P2P transfers shipped end to end.",
     claimSize: "clamp(22px,2.4vw,34px)",
     stack: "React Native · Expo · TypeScript · Node.js · Supabase",
-    cta: { label: "Get it on the App Store", href: "#", gradient: "linear-gradient(180deg,#F0E2B0,#B98F52)", shadow: "0 10px 30px rgba(234,208,138,0.32)" },
-    secondary: { label: "Case study", href: "#" },
+    cta: { label: "Get it on the App Store", href: "https://apps.apple.com/ng/app/insta-delivery-by-isds/id6746375381", gradient: "linear-gradient(180deg,#F0E2B0,#B98F52)", shadow: "0 10px 30px rgba(234,208,138,0.32)" },
+    secondary: null,
   },
   {
     eyebrow: "Insta-Delivery Vendors",
@@ -288,35 +315,8 @@ export const productSections: ProductSection[] = [
     claim: "Earnings, withdrawals and payouts all run through the wallet layer I built.",
     claimSize: "clamp(22px,2.4vw,34px)",
     stack: "React Native · Expo · TypeScript · Node.js · Supabase",
-    cta: { label: "Get it on the App Store", href: "#", gradient: "linear-gradient(180deg,#F0E2B0,#B98F52)", shadow: "0 10px 30px rgba(234,208,138,0.32)" },
-    secondary: { label: "Case study", href: "#" },
-  },
-  {
-    eyebrow: "Insta-Delivery Driver",
-    eyebrowColor: "var(--tint-isds)",
-    name: "ISDS Driver",
-    nameSize: "clamp(38px,6vw,92px)",
-    description: "A rider goes online, takes the next job, and proves the drop-off, on a cheap phone and a patchy connection. Everything here had to survive that.",
-    glow: {
-      weight: 0.8,
-      layers: [
-        { bottom: "-28%", left: "50%", width: "146%", height: "82%", background: "radial-gradient(closest-side, rgba(185,143,82,0.725), rgba(185,143,82,0.218) 54%, rgba(11,10,9,0) 78%)" },
-        { bottom: "-12%", left: "50%", width: "60%", height: "48%", background: "radial-gradient(closest-side, rgba(234,208,138,0.741), rgba(234,208,138,0.399) 44%, rgba(185,143,82,0.109) 70%, rgba(11,10,9,0) 85%)" },
-      ],
-    },
-    stageHeight: "clamp(260px,34vw,470px)",
-    screens: [
-      { src: "/design/img/img-7778.jpg", alt: "Driver message centre", order: 4, rot: -7, left: "24%", bottom: "16%", width: "12%", z: 1, padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid var(--edge)", boxShadow: "0 24px 48px rgba(0,0,0,0.6)", filter: "brightness(0.66) saturate(0.88)", mobile: { width: "128px", padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid #332C24", boxShadow: "0 20px 38px rgba(0,0,0,0.6)", filter: "brightness(0.68) saturate(0.88)" } },
-      { src: "/design/img/img-7776.jpg", alt: "Order ready for pickup", order: 2, rot: -3.5, left: "36%", bottom: "6%", width: "15%", z: 3, padding: "5px", radius: "22px", imgRadius: "18px", border: "1px solid var(--edge)", boxShadow: "0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.16)", filter: "brightness(0.86)", mobile: { width: "140px", padding: "4px", radius: "20px", imgRadius: "17px", border: "1px solid #332C24", boxShadow: "0 22px 42px rgba(0,0,0,0.6)", filter: "brightness(0.78)" } },
-      { src: "/design/img/img-7775.jpg", alt: "Driver online on the map, waiting for orders", order: 0, rot: 0, left: "50%", bottom: "0", width: "18.5%", z: 6, padding: "6px", radius: "28px", imgRadius: "23px", border: "1px solid var(--edge-lit)", boxShadow: "0 48px 90px rgba(0,0,0,0.66), inset 0 1px 0 rgba(234,208,138,0.3)", mobile: { width: "188px", padding: "5px", radius: "28px", imgRadius: "24px", border: "1px solid #463C30", boxShadow: "0 34px 60px rgba(0,0,0,0.66), inset 0 1px 0 rgba(234,208,138,0.3)" } },
-      { src: "/design/img/img-7777.jpg", alt: "Order delivered confirmation", order: 1, rot: 3.5, left: "64%", bottom: "6%", width: "15%", z: 3, padding: "5px", radius: "22px", imgRadius: "18px", border: "1px solid var(--edge)", boxShadow: "0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.16)", filter: "brightness(0.86)", mobile: { width: "152px", padding: "4px", radius: "22px", imgRadius: "19px", border: "1px solid #332C24", boxShadow: "0 24px 46px rgba(0,0,0,0.6)", filter: "brightness(0.86)" } },
-      { src: "/design/img/img-7779.jpg", alt: "Driver performance review", order: 3, rot: 7, left: "76%", bottom: "16%", width: "12%", z: 1, padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid var(--edge)", boxShadow: "0 24px 48px rgba(0,0,0,0.6)", filter: "brightness(0.66) saturate(0.88)", mobile: { width: "120px", padding: "3px", radius: "16px", imgRadius: "13px", border: "1px solid #332C24", boxShadow: "0 18px 34px rgba(0,0,0,0.6)", filter: "brightness(0.6) saturate(0.85)" } },
-    ],
-    claim: "The search and list performance work here is what took minutes out of every run.",
-    claimSize: "clamp(22px,2.4vw,34px)",
-    stack: "React Native · Expo · TypeScript · Node.js · Supabase",
-    cta: { label: "Get the driver app", href: "#", gradient: "linear-gradient(180deg,#F0E2B0,#B98F52)", shadow: "0 10px 30px rgba(234,208,138,0.32)" },
-    secondary: { label: "Case study", href: "#" },
+    cta: { label: "Get it on the App Store", href: "https://apps.apple.com/ca/app/insta-delivery-vendors/id6748257517", gradient: "linear-gradient(180deg,#F0E2B0,#B98F52)", shadow: "0 10px 30px rgba(234,208,138,0.32)" },
+    secondary: null,
   },
   {
     eyebrow: "Insta-Delivery Customer B2B",
@@ -344,9 +344,8 @@ export const productSections: ProductSection[] = [
     claimSize: "clamp(20px,2.1vw,29px)",
     stack: "React Native · Expo · TypeScript · Node.js · Supabase",
     cta: null,
-    secondary: { label: "Case study", href: "#" },
-  },
-];
+    secondary: null,
+  }];
 
 export const fitnex: ProductSection & { stat: string; statRest: string } = {
   eyebrow: "Fitnex: conceived, built and launched solo",
@@ -377,7 +376,7 @@ export const fitnex: ProductSection & { stat: string; statRest: string } = {
   claim: "Onboarding quiz, calendar share cards, offline-first service workers, a full Supabase schema migration, and the performance pass (WebP compression, chunk splitting, preloading) through to public launch.",
   stack: "React · Vite · TypeScript · Tailwind · Supabase · Resend",
   cta: { label: "Open fitnexonline.com", href: "https://fitnexonline.com", gradient: "linear-gradient(180deg,#F0C6A6,#B98F52)", shadow: "0 10px 30px rgba(231,177,136,0.34)" },
-  secondary: { label: "Case study", href: "#" },
+  secondary: null,
 };
 
 export const cartify = {

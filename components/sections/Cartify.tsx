@@ -17,10 +17,10 @@ export default function Cartify() {
           <p className={styles.desc}>{cartify.description}</p>
           <div className={styles.stack}>{cartify.stack}</div>
           <div className={styles.actions}>
-            <a href={cartify.primary.href} className={styles.action}>
+            <a href={cartify.primary.href} target="_blank" rel="noopener noreferrer" className={styles.action}>
               {cartify.primary.label}
             </a>
-            <a href={cartify.secondary.href} className={styles.action}>
+            <a href={cartify.secondary.href} target="_blank" rel="noopener noreferrer" className={styles.action}>
               {cartify.secondary.label}
             </a>
           </div>

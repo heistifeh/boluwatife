@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Schibsted_Grotesk, Archivo } from "next/font/google";
 import "./globals.css";
 
@@ -17,6 +17,10 @@ const archivo = Archivo({
 export const metadata: Metadata = {
   title: "Boluwatife Osineye, Mobile App Developer",
   description: "I turn business problems into products that ship.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0B0A09",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
