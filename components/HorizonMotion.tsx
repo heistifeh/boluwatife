@@ -63,6 +63,14 @@ export default function HorizonMotion() {
       return (absolute ? "translateX(-50%) " : "") + (rot ? `rotate(${rot}deg)` : "");
     };
 
+    // a rail (filmstrip) screen under the mobile layout takes no entrance and
+    // no drift — the rail CSS already renders it settled. Beyond matching the
+    // design, the fan entrance's translate3d(0,34px,0) would push the rail's
+    // scrollHeight ~15px past its clientHeight, and since overflow-x:auto
+    // forces overflow-y:auto, that slack latches a vertical swipe to the rail
+    // and the page stops scrolling. See prompts/07-mobile-filmstrip-scroll-lock.md.
+    const railStill = (el: HTMLElement) => isMobileRail() && screenVariant.get(el) === "rail";
+
     // per-screen drift character: outer, dimmer screens travel further and
     // slower than the anchor — one formula, no viewport branching.
     screens.forEach((el, i) => {
@@ -72,8 +80,9 @@ export default function HorizonMotion() {
       el.dataset.ampR = (0.14 * depth).toFixed(3);
       el.dataset.per = (13 + order * 2.6 + (i % 3) * 1.7).toFixed(2);
       el.dataset.ph = ((i * 1.37) % 6.283).toFixed(3);
-      el.dataset.settled = still ? "1" : "0";
-      if (!still) {
+      const skipEntrance = still || railStill(el);
+      el.dataset.settled = skipEntrance ? "1" : "0";
+      if (!skipEntrance) {
         el.style.opacity = "0";
         el.style.transform = `${baseT(el)} translate3d(0,34px,0) scale(0.96)`;
         el.style.willChange = "transform,opacity";
@@ -132,6 +141,7 @@ export default function HorizonMotion() {
       );
       // Anything already on screen at load settles immediately rather than waiting.
       screens.forEach((el) => {
+        if (railStill(el)) return;
         const r = el.getBoundingClientRect();
         if (r.top < window.innerHeight && r.bottom > 0) settle(el);
         else settleIO.observe(el);
