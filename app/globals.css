@@ -75,6 +75,16 @@ body {
   overflow-x: clip;
 }
 
+/* Section glows bleed past their section box by design (Glow: inset -12% 0,
+   layers at bottom:-36%). At the page's last section that bleed has nothing
+   to overlap, so it stretched the document by ~330px of empty glow below the
+   footer. Clipping main contains the bleed at the page's top and bottom edges
+   while leaving every section-to-section overlap inside main untouched.
+   Safe for the sticky jump-nav, which lives outside main. */
+main {
+  overflow: clip;
+}
+
 body {
   min-height: 100%;
   color: var(--paper);

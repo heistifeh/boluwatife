@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
         <h1 className={`${styles.headline} font-display`}>
           Boluwatife Osineye
-          <span className={styles.subhead}>Mobile App Developer</span>
+          <span className={styles.subhead}>Mobile &amp; Web Engineer</span>
         </h1>
         <p className={`${styles.claim} font-display`}>I turn business problems into products that ship.</p>
         <div className={styles.stats}>

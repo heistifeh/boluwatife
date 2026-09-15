@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Boluwatife Osineye — Mobile App Developer",
+    name: "Boluwatife Osineye — Mobile & Web Engineer",
     short_name: "Osineye",
     icons: [
       {

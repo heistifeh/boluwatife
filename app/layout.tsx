@@ -15,7 +15,7 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "Boluwatife Osineye, Mobile App Developer",
+  title: "Boluwatife Osineye — Mobile & Web Engineer | React Native, Next.js",
   description: "I turn business problems into products that ship.",
 };
 

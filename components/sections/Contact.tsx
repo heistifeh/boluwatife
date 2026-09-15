@@ -84,7 +84,7 @@ export default function Contact() {
           </div>
         </div>
         <div className={styles.footer}>
-          <span>Boluwatife Osineye, Mobile App Developer</span>
+          <span>Boluwatife Osineye, Mobile &amp; Web Engineer</span>
           <span>React Native · React · Next.js · Node</span>
         </div>
       </div>
