@@ -240,7 +240,7 @@ export const productSections: ProductSection[] = [
     eyebrowColor: "var(--tint-isds)",
     name: "ISDS Driver",
     nameSize: "clamp(38px,6vw,92px)",
-    description: "A rider goes online, takes the next job, and proves the drop-off, on a cheap phone and a patchy connection. Everything here had to survive that.",
+    description: "A rider goes online, takes the next job, and proves the drop-off, on a cheap phone and a patchy connection.",
     glow: {
       weight: 0.8,
       layers: [
@@ -268,7 +268,7 @@ export const productSections: ProductSection[] = [
     name: "ISDS Customer",
     nameSize: "clamp(38px,6vw,92px)",
     description:
-      "Ordering from a nearby vendor used to mean phone calls and cash. This app carries the whole thing: pay from an in-app wallet, watch the delivery move, talk to nobody.",
+      "Ordering from a nearby vendor used to mean phone calls and cash. This app carries the whole thing: pay from an in-app wallet, watch the delivery move.",
     glow: {
       weight: 0.85,
       layers: [
@@ -296,7 +296,7 @@ export const productSections: ProductSection[] = [
     eyebrowColor: "var(--tint-isds)",
     name: "ISDS Vendors",
     nameSize: "clamp(38px,6vw,92px)",
-    description: "A shop needs to accept an order, prepare it against a timer, dispatch it, and get its money the same day. That is the whole app.",
+    description: "A shop needs to accept an order, prepare it against a timer, dispatch it, and get its money the same day.",
     glow: {
       weight: 0.8,
       layers: [
@@ -383,7 +383,7 @@ export const cartify = {
   badge: { label: "Demo project", dashed: true },
   eyebrow: "Cartify",
   eyebrowColor: "var(--tint-cartify)",
-  description: "A storefront that takes a real payment: browse, basket, sign-in, Stripe checkout. Built to prove the commerce path works, not to run a business.",
+  description: "A storefront that takes a real payment: browse, basket, sign-in, Stripe checkout. Built to prove the commerce path works.",
   stack: "Next.js · TypeScript · Stripe · Clerk",
   primary: { label: "Open the demo", href: "https://next-ecommerce-eta-nine.vercel.app" },
   secondary: { label: "Source on GitHub", href: "https://github.com/heistifeh/next-ecommerce" },
