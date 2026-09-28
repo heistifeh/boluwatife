@@ -13,9 +13,49 @@ import FrontEndToSystem from "@/components/sections/FrontEndToSystem";
 import Contact from "@/components/sections/Contact";
 import { productSections } from "@/lib/content";
 
+const SITE = "https://boluwatifeosineye.com";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${SITE}/#person`,
+      name: "Boluwatife Osineye",
+      alternateName: "Tife",
+      jobTitle: "Mobile & Web Engineer",
+      url: `${SITE}/`,
+      email: "mailto:boluwatife.e.osineye@gmail.com",
+      address: { "@type": "PostalAddress", addressCountry: "NG" },
+      alumniOf: { "@type": "CollegeOrUniversity", name: "University of Ilorin" },
+      knowsAbout: ["React Native", "Expo", "React", "Next.js", "TypeScript", "Node.js", "Supabase", "Firebase"],
+      sameAs: ["https://github.com/heistifeh", "https://linkedin.com/in/boluwatifeosineye"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE}/#website`,
+      url: `${SITE}/`,
+      name: "Boluwatife Osineye",
+      author: { "@id": `${SITE}/#person` },
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${SITE}/#profile`,
+      url: `${SITE}/`,
+      name: "Boluwatife Osineye — Mobile & Web Engineer",
+      isPartOf: { "@id": `${SITE}/#website` },
+      mainEntity: { "@id": `${SITE}/#person` },
+    },
+  ],
+};
+
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+      />
       <Nav />
       <JumpNav />
       <AmbientGradient />

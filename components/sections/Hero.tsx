@@ -22,7 +22,7 @@ export default function Hero() {
           <Collage screens={heroScreens} stageHeight="clamp(280px,41vw,580px)" variant="fan" />
         </div>
         <h1 className={`${styles.headline} font-display`}>
-          Boluwatife Osineye
+          Boluwatife Osineye{" "}
           <span className={styles.subhead}>Mobile &amp; Web Engineer</span>
         </h1>
         <p className={`${styles.claim} font-display`}>I turn business problems into products that ship.</p>
@@ -32,13 +32,13 @@ export default function Hero() {
           <span>
             <span className={styles.num}>200+</span>{" "}
             <span className={styles.dOnly}>users on a solo build</span>
-            <span className={styles.mOnly}>users, solo build</span>
+            <span className={styles.mOnly} data-text="users, solo build" aria-hidden="true" />
           </span>
           <span className={styles.rule} aria-hidden="true" />
           <span>
             <span className={styles.num}>100+</span>{" "}
             <span className={styles.dOnly}>developers mentored</span>
-            <span className={styles.mOnly}>devs mentored</span>
+            <span className={styles.mOnly} data-text="devs mentored" aria-hidden="true" />
           </span>
         </div>
       </div>

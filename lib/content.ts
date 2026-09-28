@@ -229,7 +229,7 @@ export const heroScreens: ScreenSpec[] = [
 
 export const trackRecordBlock = {
   title: "Track record",
-  body: "I lead frontend engineering at ISDS (wallet, checkout, performance) across four apps. I've mentored 100+ engineers and shipped Fitnex solo to 200+ users, and still maintain it.",
+  body: "I led frontend delivery at ISDS (wallet, checkout, performance) across four apps. I've mentored 100+ engineers and shipped Fitnex solo to 200+ users, and still maintain it.",
   highlights: ["100+", "200+"],
 } as const;
 

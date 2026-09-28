@@ -1,0 +1,36 @@
+# Boluwatife Osineye
+
+> Mobile and web engineer based in Nigeria. Builds React Native, React and Next.js apps for logistics, payments and commerce. Has mentored 100+ developers. Open to full-time and contract work, remote.
+
+Site: https://boluwatifeosineye.com
+
+## Roles
+
+- ISDS, Frontend Developer (Jul 2025 – Jul 2026): led frontend delivery (wallet, checkout, performance) across four Insta-Delivery apps.
+- Imagine Integrated, Mobile Developer (Jan 2025 – Jul 2025)
+- Sabi Programmers (2024)
+
+## Projects
+
+- Insta-Delivery Customer (ISDS), live on the App Store, with wallet funding and P2P transfers: https://apps.apple.com/ng/app/insta-delivery-by-isds/id6746375381
+- Insta-Delivery Vendors (ISDS), live on the App Store; orders, dispatch, earnings, withdrawals and payouts: https://apps.apple.com/ca/app/insta-delivery-vendors/id6748257517
+- Insta-Delivery Driver (ISDS), live on the App Store; riders go online, take jobs and prove drop-off: https://apps.apple.com/ar/app/insta-delivery-driver/id6747667869?l=en-GB
+- ISDS Customer B2B: bulk local, international and multi-drop shipments. In development, not launched.
+- Fitnex: live PWA, 200+ active users. Workout logging and progress tracking, works offline. Built solo and still maintained: https://fitnexonline.com
+- Cartify: demo storefront with Stripe checkout and Clerk sign-in.
+  - Demo: https://next-ecommerce-eta-nine.vercel.app
+  - Source: https://github.com/heistifeh/next-ecommerce
+
+## Stack
+
+React Native, Expo, React, Next.js, TypeScript, Node.js, Supabase, Firebase, Vite, Tailwind, Stripe, Clerk.
+
+## Availability
+
+Open to full-time and contract roles, remote.
+
+## Contact
+
+- Email: boluwatife.e.osineye@gmail.com
+- GitHub: https://github.com/heistifeh
+- LinkedIn: https://linkedin.com/in/boluwatifeosineye
