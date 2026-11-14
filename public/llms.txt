@@ -6,7 +6,7 @@ Site: https://boluwatifeosineye.com
 
 ## Roles
 
-- ISDS, Frontend Developer (Jul 2025 – Oct 2026): led frontend delivery (wallet, checkout, performance) across four Insta-Delivery apps.
+- ISDS, Lead Frontend Developer, web and mobile (Jul 2025 – Oct 2026): led frontend delivery (wallet, checkout, performance) across four Insta-Delivery apps.
 - Imagine Integrated, Mobile Developer (Jan 2025 – Jul 2025)
 - Sabi Programmers (2024)
 
