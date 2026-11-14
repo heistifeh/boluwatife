@@ -1,12 +1,12 @@
 # Boluwatife Osineye
 
-> Full-stack engineer based in Nigeria. Builds React Native, React and Next.js apps for logistics, payments and commerce. Has mentored 100+ developers. Open to full-time and contract work, remote. Also runs Klinfits, a live clothing shop with an AI operations agent built on Claude.
+> Full-stack engineer based in Nigeria. Builds React Native, React and Next.js apps for logistics, payments and commerce. Has mentored 97+ developers. Open to full-time and contract work, remote. Also runs Klinfits, a live clothing shop with an AI operations agent built on Claude.
 
 Site: https://boluwatifeosineye.com
 
 ## Roles
 
-- ISDS, Frontend Developer (Jul 2025 – Jul 2026): led frontend delivery (wallet, checkout, performance) across four Insta-Delivery apps.
+- ISDS, Frontend Developer (Jul 2025 – Oct 2026): led frontend delivery (wallet, checkout, performance) across four Insta-Delivery apps.
 - Imagine Integrated, Mobile Developer (Jan 2025 – Jul 2025)
 - Sabi Programmers (2024)
 

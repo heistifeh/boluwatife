@@ -36,7 +36,7 @@ export default function Hero() {
           </span>
           <span className={styles.rule} aria-hidden="true" />
           <span>
-            <span className={styles.num}>100+</span>{" "}
+            <span className={styles.num}>97+</span>{" "}
             <span className={styles.dOnly}>developers mentored</span>
             <span className={styles.mOnly} data-text="devs mentored" aria-hidden="true" />
           </span>

@@ -76,7 +76,7 @@ export type ProductSection = {
 export const heroStats = [
   "5 systems live",
   { value: "200+", rest: "users on a solo build" },
-  { value: "100+", rest: "developers mentored" },
+  { value: "97+", rest: "developers mentored" },
 ] as const;
 
 export const heroScreens: ScreenSpec[] = [
@@ -233,8 +233,8 @@ export const heroScreens: ScreenSpec[] = [
 
 export const trackRecordBlock = {
   title: "Track record",
-  body: "I led frontend delivery at ISDS (wallet, checkout, performance) across four apps. I've mentored 100+ engineers and shipped Fitnex solo to 200+ users, and still maintain it.",
-  highlights: ["100+", "200+"],
+  body: "I led frontend delivery at ISDS (wallet, checkout, performance) across four apps. I've mentored 97+ engineers and shipped Fitnex solo to 200+ users, and still maintain it.",
+  highlights: ["97+", "200+"],
 } as const;
 
 export const productSections: ProductSection[] = [
