@@ -14,7 +14,7 @@ Site: https://boluwatifeosineye.com
 
 - Klinfits ops agent: an AI operations agent (Claude, tool use) inside the private Telegram bot of my own shop, Klinfits. It turns a pasted WhatsApp order into a priced payment link that I approve with one tap. Live.
   - Case study: https://boluwatifeosineye.com/work/klinfits-ops-agent
-  - Shop: https://klinfits.shop
+  - Shop: https://www.klinfits.shop/
 - Insta-Delivery Customer (ISDS), live on the App Store, with wallet funding and P2P transfers: https://apps.apple.com/ng/app/insta-delivery-by-isds/id6746375381
 - Insta-Delivery Vendors (ISDS), live on the App Store; orders, dispatch, earnings, withdrawals and payouts: https://apps.apple.com/ca/app/insta-delivery-vendors/id6748257517
 - Insta-Delivery Driver (ISDS), live on the App Store; riders go online, take jobs and prove drop-off: https://apps.apple.com/ar/app/insta-delivery-driver/id6747667869?l=en-GB

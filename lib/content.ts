@@ -405,8 +405,8 @@ export const klinfits: ProductSection = {
   claim: "The AI proposes, the code checks, the human approves.",
   claimSize: "clamp(22px,2.4vw,34px)",
   stack: "Next.js 16 · TypeScript · Anthropic API (Claude Haiku 5.5, tool use) · Telegram Bot API · Paystack · Neon Postgres",
-  cta: { label: "Read the case study", href: "/work/klinfits-ops-agent", gradient: "linear-gradient(180deg,#F0C9B8,#B98F52)", shadow: "0 10px 30px rgba(227,154,134,0.32)" },
-  secondary: { label: "Open klinfits.shop", href: "https://klinfits.shop" },
+  cta: { label: "Visit klinfits.shop", href: "https://www.klinfits.shop/", gradient: "linear-gradient(180deg,#F0C9B8,#B98F52)", shadow: "0 10px 30px rgba(227,154,134,0.32)" },
+  secondary: { label: "Read the case study", href: "/work/klinfits-ops-agent" },
 };
 
 export const klinfitsCaseStudy = {
@@ -510,7 +510,7 @@ export const klinfitsCaseStudy = {
     ],
   },
   exampleImage: { src: "/work/klinfits/ops-agent-telegram.jpg", alt: "Telegram chat: a pasted WhatsApp order, the \"Link made\" confirmation for ₦66,499, and a ready-to-send reply", width: 1040, height: 808 },
-  link: { label: "Open klinfits.shop", href: "https://klinfits.shop" },
+  link: { label: "Visit klinfits.shop", href: "https://www.klinfits.shop/" },
 } as const;
 
 export const stackLayers = [

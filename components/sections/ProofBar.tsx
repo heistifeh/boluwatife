@@ -6,7 +6,7 @@ export default function ProofBar() {
       <div className={styles.grid}>
         <div className={styles.col}>
           <div className={styles.title}>Klinfits: live shop with an AI ops agent</div>
-          <a href="https://klinfits.shop" target="_blank" rel="noopener noreferrer" className={styles.link}>
+          <a href="https://www.klinfits.shop/" target="_blank" rel="noopener noreferrer" className={styles.link}>
             klinfits.shop
           </a>
         </div>

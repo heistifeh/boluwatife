@@ -37,6 +37,11 @@ export default function KlinfitsCaseStudy() {
             <div className={styles.eyebrow}>{klinfits.eyebrow}</div>
             <h1 className={`${styles.title} font-display`}>{cs.title}</h1>
             <p className={styles.subtitle}>{cs.subtitle}</p>
+            <div className={styles.heroActions}>
+              <a href={cs.link.href} target="_blank" rel="noopener noreferrer" className={styles.cta}>
+                {cs.link.label}
+              </a>
+            </div>
           </div>
         </div>
 

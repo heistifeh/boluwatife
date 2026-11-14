@@ -42,7 +42,11 @@ export default function ProductSection({ data }: { data: ProductSectionData }) {
                 </a>
               )}
               {data.secondary && (
-                <a href={data.secondary.href} target="_blank" rel="noopener noreferrer" className={styles.secondary}>
+                <a
+                  href={data.secondary.href}
+                  {...(data.secondary.href.startsWith("/") ? {} : { target: "_blank", rel: "noopener noreferrer" })}
+                  className={styles.secondary}
+                >
                   {data.secondary.label}
                 </a>
               )}
