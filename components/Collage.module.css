@@ -44,6 +44,12 @@
   will-change: transform, opacity;
 }
 
+/* The hero collage is on screen at first paint, so it is visible before any
+   JS runs and never fades in. See prompts/12-no-hero-flash-on-load.md. */
+.stage[data-variant="fan"] .screen {
+  opacity: 1;
+}
+
 @media (max-width: 699px) {
   .stage[data-variant="rail"] .screen {
     position: relative;
@@ -86,7 +92,7 @@
 .img {
   width: 100%;
   height: auto;
-  aspect-ratio: 9 / 19;
+  aspect-ratio: var(--aspect, 9 / 19);
   object-fit: cover;
   object-position: top;
   border-radius: var(--img-radius);

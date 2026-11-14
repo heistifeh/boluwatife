@@ -11,7 +11,7 @@ import Fitnex from "@/components/sections/Fitnex";
 import Cartify from "@/components/sections/Cartify";
 import FrontEndToSystem from "@/components/sections/FrontEndToSystem";
 import Contact from "@/components/sections/Contact";
-import { productSections } from "@/lib/content";
+import { klinfits, productSections } from "@/lib/content";
 
 const SITE = "https://boluwatifeosineye.com";
 
@@ -23,7 +23,7 @@ const jsonLd = {
       "@id": `${SITE}/#person`,
       name: "Boluwatife Osineye",
       alternateName: "Tife",
-      jobTitle: "Mobile & Web Engineer",
+      jobTitle: "Full-Stack Engineer",
       url: `${SITE}/`,
       email: "mailto:boluwatife.e.osineye@gmail.com",
       address: { "@type": "PostalAddress", addressCountry: "NG" },
@@ -42,7 +42,7 @@ const jsonLd = {
       "@type": "ProfilePage",
       "@id": `${SITE}/#profile`,
       url: `${SITE}/`,
-      name: "Boluwatife Osineye — Mobile & Web Engineer",
+      name: "Boluwatife Osineye — Full-Stack Engineer",
       isPartOf: { "@id": `${SITE}/#website` },
       mainEntity: { "@id": `${SITE}/#person` },
     },
@@ -64,6 +64,7 @@ export default function Page() {
         <Hero />
         <ProofBar />
         <TrackRecord />
+        <ProductSection data={klinfits} />
         <IsdsConnective />
         {productSections.map((section) => (
           <ProductSection key={section.name} data={section} />

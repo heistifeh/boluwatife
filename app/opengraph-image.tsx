@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Boluwatife Osineye, Mobile & Web Engineer: React Native, React, Next.js, Node";
+export const alt = "Boluwatife Osineye, Full-Stack Engineer: React Native, React, Next.js, Node";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -26,7 +26,7 @@ export default function Image() {
           Boluwatife Osineye
         </div>
         <div style={{ marginTop: 22, fontSize: 52, fontWeight: 600, color: "#E2C89C", letterSpacing: "-0.02em" }}>
-          Mobile &amp; Web Engineer
+          Full-Stack Engineer
         </div>
         <div style={{ marginTop: 56, fontSize: 32, color: "rgba(236,230,220,0.78)" }}>
           React Native · React · Next.js · Node

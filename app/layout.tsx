@@ -14,9 +14,9 @@ const archivo = Archivo({
   weight: ["400", "500", "600", "700"],
 });
 
-const title = "Boluwatife Osineye — Mobile & Web Engineer | React Native, Next.js";
+const title = "Boluwatife Osineye — Full-Stack Engineer | React Native, Next.js";
 const description =
-  "Boluwatife Osineye is a mobile and web engineer in Nigeria building React Native, React and Next.js apps for logistics, payments and commerce.";
+  "Boluwatife Osineye is a full-stack engineer in Nigeria building React Native, React and Next.js apps for logistics, payments and commerce, and AI agents built on Claude.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://boluwatifeosineye.com"),
@@ -39,6 +39,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Boluwatife Osineye", url: "https://boluwatifeosineye.com" }],
   creator: "Boluwatife Osineye",
   keywords: [
+    "full-stack engineer",
     "React Native",
     "Expo",
     "React",

@@ -3,7 +3,7 @@ import styles from "./IsdsConnective.module.css";
 
 export default function IsdsConnective() {
   return (
-    <section id="work" data-screen-label="ISDS connective moment" data-sect="" className={styles.section}>
+    <section data-screen-label="ISDS connective moment" data-sect="" className={styles.section}>
       <Glow
         spec={{
           weight: 0.5,
@@ -16,8 +16,8 @@ export default function IsdsConnective() {
         <div className={styles.name}>
           <div className={`${styles.title} font-display`}>ISDS</div>
           <p className={styles.desc}>
-            Mobile logistics and commerce for businesses across Nigeria and Africa. Four apps, four different users,
-            one platform: customer, vendor, driver, and a business-facing client.
+            Mobile logistics and commerce for businesses across Nigeria and Africa. Three apps, three different users,
+            one platform: customer, vendor and driver.
           </p>
         </div>
       </div>

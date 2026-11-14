@@ -44,6 +44,7 @@ export default function Collage({
               "--shadow": s.boxShadow,
               "--filter": s.filter,
               "--img-radius": s.imgRadius,
+              "--aspect": s.aspect,
               "--raised": "var(--raised)",
               "--m-left": s.mobile?.left,
               "--m-bottom": s.mobile?.bottom,
@@ -65,8 +66,8 @@ export default function Collage({
           <Image
             src={s.src}
             alt={s.alt}
-            width={520}
-            height={1099}
+            width={s.imgWidth ?? 520}
+            height={s.imgHeight ?? 1099}
             className={styles.img}
             priority={s.eager}
             loading={s.eager ? undefined : "lazy"}

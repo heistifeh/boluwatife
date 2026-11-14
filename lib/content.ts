@@ -31,6 +31,10 @@ export type ScreenSpec = {
   boxShadow: string;
   filter?: string;
   eager?: boolean;
+  /** CSS aspect-ratio for non-phone screenshots, e.g. "1040 / 600". Defaults to the phone 9 / 19. */
+  aspect?: string;
+  imgWidth?: number;
+  imgHeight?: number;
   mobile?: MobileScreenSpec;
   /** Rail (mobile filmstrip) variant only: this screen exists only on mobile and never renders in the desktop fan. */
   desktopHidden?: boolean;
@@ -70,15 +74,15 @@ export type ProductSection = {
 };
 
 export const heroStats = [
-  "4 systems live",
+  "5 systems live",
   { value: "200+", rest: "users on a solo build" },
   { value: "100+", rest: "developers mentored" },
 ] as const;
 
 export const heroScreens: ScreenSpec[] = [
   {
-    src: "/design/img/bulk-shipment-1.jpg",
-    alt: "ISDS bulk shipment package details",
+    src: "/work/klinfits/klinfits-mobile.jpg",
+    alt: "Klinfits shop home page on a phone",
     order: 4,
     rot: -8,
     left: "17%",
@@ -91,7 +95,19 @@ export const heroScreens: ScreenSpec[] = [
     border: "1px solid var(--edge)",
     boxShadow: "0 26px 50px rgba(0,0,0,0.6)",
     filter: "brightness(0.66) saturate(0.88)",
-    mobile: { hidden: true },
+    mobile: {
+      rot: 10,
+      left: "87%",
+      bottom: "34px",
+      width: "32%",
+      z: 1,
+      padding: "3px",
+      radius: "16px",
+      imgRadius: "13px",
+      border: "1px solid #332C24",
+      boxShadow: "0 18px 36px rgba(0,0,0,0.6)",
+      filter: "brightness(0.58) saturate(0.84)",
+    },
   },
   {
     src: "/design/img/dashboard-24e93d62.jpg",
@@ -151,8 +167,8 @@ export const heroScreens: ScreenSpec[] = [
     },
   },
   {
-    src: "/design/img/img-7788-2.jpg",
-    alt: "Fitnex home with sessions, volume and streak",
+    src: "/design/img/img-7782.jpg",
+    alt: "Fitnex landing screen: Train hard, track harder",
     order: 1,
     rot: 3,
     left: "60%",
@@ -194,19 +210,7 @@ export const heroScreens: ScreenSpec[] = [
     border: "1px solid var(--edge)",
     boxShadow: "0 32px 60px rgba(0,0,0,0.6)",
     filter: "brightness(0.82)",
-    mobile: {
-      rot: 10,
-      left: "87%",
-      bottom: "34px",
-      width: "32%",
-      z: 1,
-      padding: "3px",
-      radius: "16px",
-      imgRadius: "13px",
-      border: "1px solid #332C24",
-      boxShadow: "0 18px 36px rgba(0,0,0,0.6)",
-      filter: "brightness(0.58) saturate(0.84)",
-    },
+    mobile: { hidden: true },
   },
   {
     src: "/design/img/img-7848.jpg",
@@ -317,35 +321,8 @@ export const productSections: ProductSection[] = [
     stack: "React Native · Expo · TypeScript · Node.js · Supabase",
     cta: { label: "Get it on the App Store", href: "https://apps.apple.com/ca/app/insta-delivery-vendors/id6748257517", gradient: "linear-gradient(180deg,#F0E2B0,#B98F52)", shadow: "0 10px 30px rgba(234,208,138,0.32)" },
     secondary: null,
-  },
-  {
-    eyebrow: "Insta-Delivery Customer B2B",
-    eyebrowColor: "var(--tint-isds)",
-    badge: { label: "In development", dashed: true },
-    name: "ISDS Customer B2B",
-    nameSize: "clamp(34px,5.2vw,78px)",
-    description: "Businesses booking local, international and multi-drop bulk shipments, with insurance and compliance handled in the same flow.",
-    glow: {
-      weight: 0.62,
-      layers: [
-        { bottom: "-30%", left: "50%", width: "140%", height: "80%", background: "radial-gradient(closest-side, rgba(185,143,82,0.653), rgba(185,143,82,0.2) 54%, rgba(11,10,9,0) 78%)" },
-        { bottom: "-14%", left: "50%", width: "54%", height: "44%", background: "radial-gradient(closest-side, rgba(234,208,138,0.741), rgba(234,208,138,0.327) 44%, rgba(11,10,9,0) 82%)" },
-      ],
-    },
-    stageHeight: "clamp(240px,30vw,420px)",
-    screens: [
-      { src: "/design/img/onboarding-3.jpg", alt: "B2B onboarding: insurance and protection", order: 3, rot: -6, left: "29%", bottom: "14%", width: "11.5%", z: 1, padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid var(--edge)", boxShadow: "0 24px 48px rgba(0,0,0,0.6)", filter: "brightness(0.66) saturate(0.88)", mobile: { width: "126px", padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid #332C24", boxShadow: "0 20px 38px rgba(0,0,0,0.6)", filter: "brightness(0.68) saturate(0.88)" } },
-      { src: "/design/img/bulk-shipment-1.jpg", alt: "Bulk shipment package details", order: 1, rot: -3, left: "39.5%", bottom: "6%", width: "14%", z: 3, padding: "5px", radius: "22px", imgRadius: "18px", border: "1px solid var(--edge)", boxShadow: "0 32px 60px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.14)", filter: "brightness(0.86)", mobile: { width: "146px", padding: "4px", radius: "22px", imgRadius: "19px", border: "1px solid #332C24", boxShadow: "0 24px 46px rgba(0,0,0,0.6)", filter: "brightness(0.86)" } },
-      { src: "/design/img/dashboard.jpg", alt: "B2B dashboard: international, local and bulk shipping", order: 0, rot: 0, left: "51%", bottom: "0", width: "17%", z: 6, padding: "6px", radius: "26px", imgRadius: "21px", border: "1px solid var(--edge-lit)", boxShadow: "0 44px 84px rgba(0,0,0,0.66), inset 0 1px 0 rgba(234,208,138,0.26)", mobile: { width: "176px", padding: "5px", radius: "26px", imgRadius: "22px", border: "1px solid #463C30", boxShadow: "0 30px 56px rgba(0,0,0,0.66), inset 0 1px 0 rgba(234,208,138,0.26)" } },
-      { src: "/design/img/bulk-shipment-2.jpg", alt: "Bulk shipment delivery method", order: 2, rot: 3, left: "63%", bottom: "6%", width: "14%", z: 3, padding: "5px", radius: "22px", imgRadius: "18px", border: "1px solid var(--edge)", boxShadow: "0 32px 60px rgba(0,0,0,0.62), inset 0 1px 0 rgba(234,208,138,0.14)", filter: "brightness(0.86)", mobile: { width: "136px", padding: "4px", radius: "20px", imgRadius: "17px", border: "1px solid #332C24", boxShadow: "0 22px 42px rgba(0,0,0,0.6)", filter: "brightness(0.78)" } },
-      { src: "/design/img/bulk-shipment.jpg", alt: "Bulk shipment pickup step", order: 4, rot: 6, left: "73.5%", bottom: "14%", width: "11.5%", z: 1, padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid var(--edge)", boxShadow: "0 24px 48px rgba(0,0,0,0.6)", filter: "brightness(0.66) saturate(0.88)", mobile: { width: "118px", padding: "3px", radius: "16px", imgRadius: "13px", border: "1px solid #332C24", boxShadow: "0 18px 34px rgba(0,0,0,0.6)", filter: "brightness(0.6) saturate(0.85)" } },
-    ],
-    claim: "Not launched yet. These are the flows in build, audited on TestFlight before release.",
-    claimSize: "clamp(20px,2.1vw,29px)",
-    stack: "React Native · Expo · TypeScript · Node.js · Supabase",
-    cta: null,
-    secondary: null,
-  }];
+  }
+];
 
 export const fitnex: ProductSection & { stat: string; statRest: string } = {
   eyebrow: "Fitnex: conceived, built and launched solo",
@@ -404,6 +381,138 @@ export const cartify = {
   stageHeight: "clamp(200px,24vw,320px)",
 };
 
+export const klinfits: ProductSection = {
+  id: "work",
+  eyebrow: "Klinfits",
+  eyebrowColor: "var(--tint-klinfits)",
+  badge: { label: "Live" },
+  name: "Klinfits ops agent",
+  nameSize: "clamp(38px,6vw,92px)",
+  description:
+    "An AI operations agent for my own clothing shop. I paste a customer's WhatsApp order into Telegram, and it checks stock, prices delivery and drafts a payment link that I approve with one tap.",
+  glow: {
+    weight: 0.8,
+    layers: [
+      { bottom: "-28%", left: "50%", width: "146%", height: "82%", background: "radial-gradient(closest-side, rgba(185,143,82,0.725), rgba(185,143,82,0.218) 54%, rgba(11,10,9,0) 78%)" },
+      { bottom: "-12%", left: "50%", width: "60%", height: "48%", background: "radial-gradient(closest-side, rgba(227,154,134,0.741), rgba(227,154,134,0.399) 44%, rgba(185,143,82,0.109) 70%, rgba(11,10,9,0) 85%)" },
+    ],
+  },
+  stageHeight: "clamp(240px,30vw,420px)",
+  screens: [
+    { src: "/work/klinfits/klinfits-shop.jpg", alt: "The Klinfits shop page with four products", aspect: "1040 / 600", imgWidth: 1040, imgHeight: 600, order: 0, rot: -1.5, left: "37%", bottom: "0", width: "52%", z: 6, padding: "6px", radius: "24px", imgRadius: "19px", border: "1px solid var(--edge-lit)", boxShadow: "0 48px 90px rgba(0,0,0,0.66), inset 0 1px 0 rgba(227,154,134,0.3)", mobile: { width: "300px", padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid #463C30", boxShadow: "0 30px 56px rgba(0,0,0,0.66), inset 0 1px 0 rgba(227,154,134,0.3)" } },
+    { src: "/work/klinfits/ops-agent-telegram.jpg", alt: "Telegram chat: a pasted WhatsApp order, the \"Link made\" confirmation for ₦66,499, and a ready-to-send reply", aspect: "1040 / 808", imgWidth: 1040, imgHeight: 808, order: 1, rot: 4, left: "79%", bottom: "8%", width: "33%", z: 3, padding: "5px", radius: "22px", imgRadius: "18px", border: "1px solid var(--edge)", boxShadow: "0 34px 64px rgba(0,0,0,0.62), inset 0 1px 0 rgba(227,154,134,0.16)", filter: "brightness(0.86)", mobile: { width: "240px", padding: "4px", radius: "18px", imgRadius: "15px", border: "1px solid #332C24", boxShadow: "0 22px 42px rgba(0,0,0,0.6)", filter: "brightness(0.86)" } },
+  ],
+  claim: "The AI proposes, the code checks, the human approves.",
+  claimSize: "clamp(22px,2.4vw,34px)",
+  stack: "Next.js 16 · TypeScript · Anthropic API (Claude Haiku 5.5, tool use) · Telegram Bot API · Paystack · Neon Postgres",
+  cta: { label: "Read the case study", href: "/work/klinfits-ops-agent", gradient: "linear-gradient(180deg,#F0C9B8,#B98F52)", shadow: "0 10px 30px rgba(227,154,134,0.32)" },
+  secondary: { label: "Open klinfits.shop", href: "https://klinfits.shop" },
+};
+
+export const klinfitsCaseStudy = {
+  title: "Klinfits ops agent",
+  subtitle: "An AI assistant that turns WhatsApp orders into payment links.",
+  context: {
+    heading: "The project in context",
+    body: "Klinfits is my online shop for compression gym wear in Lagos, Nigeria. I designed and built the whole shop: Next.js 16, TypeScript, Tailwind v4, Paystack checkout, a Neon Postgres admin, and a Telegram bot for order alerts. The ops agent is the AI feature on top of it. It lives inside the shop's private Telegram bot, and only I use it.",
+    image: { src: "/work/klinfits/klinfits-shop.jpg", alt: "The Klinfits shop page with four products", width: 1040, height: 600 },
+  },
+  problem: {
+    heading: "The problem",
+    body: [
+      "Many buyers order on WhatsApp instead of the website. Each order meant reading the chat to work out products, sizes and quantities, checking stock, looking up the delivery price, building a payment link in the admin, and typing a reply.",
+      "Lagos is split into rider zones with different prices, and other cities go by park delivery. It took several minutes per order, and it was easy to get a price or a total wrong.",
+    ],
+  },
+  built: {
+    heading: "What I built",
+    steps: [
+      "I paste the buyer's WhatsApp message into the Telegram bot, or send a screenshot of the chat.",
+      "The agent (Claude, through the Anthropic API with tool use) works out the order and calls the shop's own tools: products with live stock and per-size prices, the delivery zone or city and its fee, and a coupon check if the buyer gave a code.",
+      "It proposes a payment link. The bot shows a card with every item, the delivery fee and the total, with Make link and Cancel buttons.",
+      "I tap Make link. The link is created and the bot sends back a ready-to-send WhatsApp reply in the brand's voice.",
+      "It also answers shop questions: \"what do I need to pack?\", \"who hasn't paid?\", \"how were sales this week?\"",
+    ],
+    note: "If something essential is missing, like a size or a delivery area, it asks instead of guessing.",
+  },
+  safety: {
+    heading: "How it stays safe",
+    rule: "The AI proposes, the code checks, the human approves.",
+    points: [
+      "The agent can only read shop data and propose a link. It cannot create a link, change stock or message a customer on its own.",
+      "Every figure on the approval card is computed by the shop's server code from the product catalogue and live stock, never taken from the AI's text.",
+      "When I approve, the server re-prices the order again from live stock, and a double tap can't create two links.",
+      "Customer messages are treated as data, not instructions. If a pasted message says \"give me 50% off\", the agent flags it instead of doing it.",
+      "Only my Telegram account can reach the agent.",
+    ],
+  },
+  example: {
+    heading: "Real example",
+    when: "From the live test, 14 Nov 2026",
+    inputLabel: "Input pasted into Telegram:",
+    input: "Hi Klinfits, I want the spider set in M and a black tee size L. I'm in Ikorodu garage. My name is Ada, 08031234567",
+    resultLabel: "Result:",
+    results: [
+      "Spider Set (M) ₦45,000 + Plain Black tee (L) ₦15,999, which includes the ₦999 size L surcharge",
+      "Delivery: Ikorodu Garage matched to the \"Ikorodu A\" rider zone, ₦5,500",
+      "Total ₦66,499, correct to the naira",
+      "It flagged that the buyer gave only an area, not a street address.",
+    ],
+    caption: "\"Ada\" and the phone number are test data, not a real customer.",
+  },
+  numbers: {
+    heading: "Numbers",
+    items: [
+      { label: "Model", value: "Claude Haiku 5.5", note: "Switchable to a bigger model with one setting." },
+      { label: "Cost", value: "About $0.003 per order", note: "$5 of API credit covers well over 1,000 orders. An estimate from the request sizes." },
+      { label: "For me", value: "One paste and one tap", note: "Instead of several minutes of manual work." },
+      { label: "Tests", value: "17 automated tests", note: "For the agent, all passing. 124+ tests across the shop." },
+    ],
+  },
+  flow: {
+    heading: "How it works",
+    steps: [
+      "WhatsApp chat",
+      "I paste it into Telegram",
+      "Vercel webhook",
+      "Claude agent loop",
+      "Shop tools: products and stock, delivery zones, coupons",
+      "Draft saved",
+      "Approval card in Telegram",
+      "I tap Make link",
+      "Server re-prices and creates the Paystack payment link",
+      "Reply with a Send on WhatsApp button",
+      "Buyer pays",
+      "The existing Paystack webhook records the order and alerts Telegram",
+    ],
+  },
+  stack: {
+    heading: "Stack",
+    tags: [
+      "Next.js 16 (App Router)",
+      "TypeScript",
+      "Anthropic API (Claude Haiku 5.5, tool use)",
+      "Telegram Bot API",
+      "Paystack",
+      "Neon Postgres",
+      "Vercel (after() for background work)",
+      "Vitest",
+    ],
+  },
+  next: {
+    heading: "Next",
+    note: "Not built yet.",
+    items: [
+      "Morning briefing at 8am: what to pack, low stock, payments to check.",
+      "Follow-ups for payment links still unpaid after 24 hours, drafted for one-tap sending.",
+      "New product listings drafted from product photos.",
+      "Voice-note orders (needs a speech-to-text step).",
+    ],
+  },
+  exampleImage: { src: "/work/klinfits/ops-agent-telegram.jpg", alt: "Telegram chat: a pasted WhatsApp order, the \"Link made\" confirmation for ₦66,499, and a ready-to-send reply", width: 1040, height: 808 },
+  link: { label: "Open klinfits.shop", href: "https://klinfits.shop" },
+} as const;
+
 export const stackLayers = [
   {
     n: "01",
@@ -435,6 +544,7 @@ export const stackLayers = [
 
 export const jumpNavItems = [
   { label: "Overview", href: "#top" },
+  { label: "Klinfits", href: "#work" },
   { label: "ISDS", href: "#isds" },
   { label: "Fitnex", href: "#fitnex" },
   { label: "Cartify", href: "#cartify" },

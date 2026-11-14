@@ -23,11 +23,11 @@ export default function Hero() {
         </div>
         <h1 className={`${styles.headline} font-display`}>
           Boluwatife Osineye{" "}
-          <span className={styles.subhead}>Mobile &amp; Web Engineer</span>
+          <span className={styles.subhead}>Full-Stack Engineer · React Native &amp; Next.js</span>
         </h1>
         <p className={`${styles.claim} font-display`}>I turn business problems into products that ship.</p>
         <div className={styles.stats}>
-          <span>4 systems live</span>
+          <span>5 systems live</span>
           <span className={styles.rule} aria-hidden="true" />
           <span>
             <span className={styles.num}>200+</span>{" "}

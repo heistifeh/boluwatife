@@ -71,6 +71,15 @@ export default function HorizonMotion() {
     // and the page stops scrolling. See prompts/07-mobile-filmstrip-scroll-lock.md.
     const railStill = (el: HTMLElement) => isMobileRail() && screenVariant.get(el) === "rail";
 
+    // Anything already on screen when the script starts was painted visible
+    // by the server; hiding it to replay an entrance reads as a blink-out and
+    // lag on slower phones. In-view content skips the entrance entirely; only
+    // below-the-fold content enters on scroll. See prompts/12-no-hero-flash-on-load.md.
+    const inViewAtLoad = (el: HTMLElement) => {
+      const r = el.getBoundingClientRect();
+      return r.top < window.innerHeight && r.bottom > 0;
+    };
+
     // per-screen drift character: outer, dimmer screens travel further and
     // slower than the anchor — one formula, no viewport branching.
     screens.forEach((el, i) => {
@@ -80,9 +89,11 @@ export default function HorizonMotion() {
       el.dataset.ampR = (0.14 * depth).toFixed(3);
       el.dataset.per = (13 + order * 2.6 + (i % 3) * 1.7).toFixed(2);
       el.dataset.ph = ((i * 1.37) % 6.283).toFixed(3);
-      const skipEntrance = still || railStill(el);
+      const skipEntrance = still || railStill(el) || inViewAtLoad(el);
       el.dataset.settled = skipEntrance ? "1" : "0";
-      if (!skipEntrance) {
+      if (skipEntrance) {
+        el.style.opacity = "1";
+      } else {
         el.style.opacity = "0";
         el.style.transform = `${baseT(el)} translate3d(0,34px,0) scale(0.96)`;
         el.style.willChange = "transform,opacity";
@@ -141,10 +152,8 @@ export default function HorizonMotion() {
       );
       // Anything already on screen at load settles immediately rather than waiting.
       screens.forEach((el) => {
-        if (railStill(el)) return;
-        const r = el.getBoundingClientRect();
-        if (r.top < window.innerHeight && r.bottom > 0) settle(el);
-        else settleIO.observe(el);
+        if (el.dataset.settled === "1") return; // rail-still or in view at load
+        settleIO.observe(el);
       });
       observers.push(settleIO);
 
@@ -171,6 +180,10 @@ export default function HorizonMotion() {
         const armSections = () => {
           sections.forEach((s) => {
             if (s.dataset.entered === "1") return;
+            if (inViewAtLoad(s)) {
+              s.dataset.entered = "1";
+              return;
+            }
             s.style.opacity = "0";
             s.style.transform = "translate3d(0,18px,0)";
             sectIO.observe(s);
@@ -293,11 +306,16 @@ export default function HorizonMotion() {
         drifting.forEach((el) => {
           if (el.dataset.settled !== "1") return;
           if (rail && screenVariant.get(el) === "rail") return;
+          // drift eases in from rest over 1.2s the first time a screen
+          // drifts, so a screen that skipped its entrance never jumps.
+          if (!el.dataset.d0) el.dataset.d0 = String(t);
+          const ramp = Math.min(1, (t - parseFloat(el.dataset.d0)) / 1.2);
+          const k = 1 - (1 - ramp) * (1 - ramp) * (1 - ramp);
           const w = 6.283 / parseFloat(el.dataset.per || "13");
           const ph = parseFloat(el.dataset.ph || "0");
-          const y = parseFloat(el.dataset.ampY || "2") * Math.sin(t * w + ph);
-          const r = parseFloat(el.dataset.ampR || "0.14") * Math.sin(t * w * 0.62 + ph * 1.3);
-          const sc = 1 + 0.0035 * Math.sin(t * w * 0.48 + ph);
+          const y = k * parseFloat(el.dataset.ampY || "2") * Math.sin(t * w + ph);
+          const r = k * parseFloat(el.dataset.ampR || "0.14") * Math.sin(t * w * 0.62 + ph * 1.3);
+          const sc = 1 + k * 0.0035 * Math.sin(t * w * 0.48 + ph);
           el.style.transform = `${baseT(el)} translate3d(0,${y.toFixed(2)}px,0) rotate(${r.toFixed(3)}deg) scale(${sc.toFixed(4)})`;
         });
       }
